@@ -1,0 +1,10 @@
+---
+layout: default
+---
+<h2>{{ page.date | date: "%m/%-d/%Y" }}, {{ page.location }}, {{ page.venue }}</h2>
+<p>{{ page.bands }}</p>
+{% if page.link %}
+<a href="{{ page.link }}"><p>Event Link</p></a>
+{% endif %}
+
+{{ content }}

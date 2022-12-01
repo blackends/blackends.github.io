@@ -1,0 +1,9 @@
+---
+layout: default
+---
+<h2>{{ page.title }}</h2>
+{{ content }}
+{% if page.author %}
+<p class="view">-{{ page.author }}</p>
+{% endif %}
+<small>{{ page.date | date: "%B %-d, %Y" }}</small>

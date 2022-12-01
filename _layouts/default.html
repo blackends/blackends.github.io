@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+{% seo %}
+    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    {% include head-custom.html %}
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <!-- <h1><a href="{{ "/" | absolute_url }}">{{ site.title }}</a></h1> -->
+
+        {% if site.logo %}
+        <h1><a href="{{ "/" | absolute_url }}"><img class="logo" src="{{site.logo | relative_url}}" alt="{{ site.title }}" /></a></h1>
+        {% endif %}
+
+        <p class="view"><a href="/tour">tour dates</a></p>
+        <p class="view"><a href="/music">music</a></p>
+        <p class="view"><a href="/videos">videos</a></p>
+        <p class="view"><a href="/news">news</a></p>
+        <p class="view"><a href="/info">info/links</a></p>
+        <p class="view"><a href="/press">press</a></p>
+        <p class="view"><a href="mailto:blackendsmusic@gmail.com" target="_blank" rel="noopener noreferrer">contact</a></p>
+
+        <div id="socials">
+            {% for social in site.data.socials %}
+            <a href="{{ social.href }}" title="{{ social.title }}" target="_blank" rel="noopener noreferrer">
+                <img src="{{ social.img }}" alt="{{ social.title }}" />
+            </a>
+            {% endfor %}
+        </div>
+
+      </header>
+      <section>
+
+      {{ content }}
+
+      </section>
+      <footer>
+      </footer>
+    </div>
+    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+  </body>
+</html>
+
