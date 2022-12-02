@@ -253,7 +253,7 @@ footer {
   }
 
   header {
-    padding-right:320px;
+    // padding-right:320px;
   }
 
   section {
@@ -271,6 +271,15 @@ footer {
     position:absolute;
     right:50px;
     top:52px;
+  }
+
+  p.view {
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  #socials {
+    // margin-top: 20px;
   }
 }
 
@@ -303,6 +312,10 @@ footer {
 
   .downloads li, .downloads li + li + li {
     width:33%;
+  }
+
+  .logo {
+    width: 100%;
   }
 }
 
