@@ -7,7 +7,7 @@ permalink: /tour/
 <ul>
 {% for show in site.categories.shows %}
 <li>
-  <a href="{{ show.url }}"><h3>{{ show.date | date: "%m/%-d/%Y" }}, {{ show.location }}, {{ show.venue }}</h3></a>
+  <h3><a href="{{ show.url }}">{{ show.date | date: "%m/%-d/%Y" }}, {{ show.location }}, {{ show.venue }}</a></h3>
   {{ show.content }}
 </li>
 {% endfor %}

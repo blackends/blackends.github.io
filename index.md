@@ -1,6 +1,6 @@
 ---
-layout: default
 title: black ends
+layout: default
 ---
 <ul>
 {% for post in site.tags.pinned %}

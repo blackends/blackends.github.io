@@ -2,7 +2,8 @@
 layout: default
 title: Press
 ---
-## Press
+## [EPK](https://drive.google.com/drive/folders/1x2ruIM24ParliPgWUqqJePIfYAbf7wuA?usp=sharing){:target="_blank"}
+---
 <ul class="alternate-text-align">
 {% for post in site.categories.press %}
 <li>

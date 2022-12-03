@@ -1,6 +1,6 @@
 ---
+title: music
 layout: default
-title: Music
 ---
 ## Music
 <ul>
