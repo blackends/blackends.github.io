@@ -1,9 +1,9 @@
 ---
 layout: show
 location: Seattle
-venue: Cherry Pit
-bands: 'Castoff, CSTMR, Rhododendron, Black Ends'
-poster: '/assets/img/posters/BLACK ENDS DEC 20th POSTER.png'
+venue: Sunset Tavern
+bands: 'Slang, Rachaels Children, Black Ends'
+poster: '/assets/img/posters/slang-rc-sunset.jpg'
 ---
 
 {% if page.poster %}

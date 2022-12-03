@@ -1,9 +1,9 @@
 ---
 layout: show
 location: Seattle
-venue: Cherry Pit
-bands: 'Castoff, CSTMR, Rhododendron, Black Ends'
-poster: '/assets/img/posters/BLACK ENDS DEC 20th POSTER.png'
+venue: "Madame Lou's"
+bands: 'The Jins, Bad Optics, Black Ends'
+poster: '/assets/img/posters/the-jins-boptics.jpg'
 ---
 
 {% if page.poster %}

@@ -1,9 +1,8 @@
 ---
 layout: show
-location: Seattle
-venue: Cherry Pit
-bands: 'Castoff, CSTMR, Rhododendron, Black Ends'
-poster: '/assets/img/posters/BLACK ENDS DEC 20th POSTER.png'
+location: Portland
+venue: Lose Yr Mind Fest, Bunk Bar
+poster: '/assets/img/posters/lose-yr-mind.jpg'
 ---
 
 {% if page.poster %}

@@ -1,9 +1,8 @@
 ---
 layout: show
 location: Seattle
-venue: Cherry Pit
-bands: 'Castoff, CSTMR, Rhododendron, Black Ends'
-poster: '/assets/img/posters/BLACK ENDS DEC 20th POSTER.png'
+venue: SAM Sculpture Park
+poster: '/assets/img/posters/summer-at-sam.jpg'
 ---
 
 {% if page.poster %}

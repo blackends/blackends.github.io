@@ -1,9 +1,9 @@
 ---
 layout: show
-location: Seattle
-venue: Cherry Pit
-bands: 'Castoff, CSTMR, Rhododendron, Black Ends'
-poster: '/assets/img/posters/BLACK ENDS DEC 20th POSTER.png'
+location: Sacramento
+venue: The Russ Room
+bands: 'Winsome, Emilee Durbin, Broken Tapes, Shades of Jade, Black Ends'
+poster: '/assets/img/posters/russ-room.jpg'
 ---
 
 {% if page.poster %}

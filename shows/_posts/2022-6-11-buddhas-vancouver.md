@@ -1,9 +1,8 @@
 ---
 layout: show
-location: Seattle
-venue: Cherry Pit
-bands: 'Castoff, CSTMR, Rhododendron, Black Ends'
-poster: '/assets/img/posters/BLACK ENDS DEC 20th POSTER.png'
+location: Vancouver, BC
+venue: Buddhas
+poster: '/assets/img/posters/buddhas.jpg'
 ---
 
 {% if page.poster %}

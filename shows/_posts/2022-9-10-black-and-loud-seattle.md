@@ -1,9 +1,8 @@
 ---
 layout: show
 location: Seattle
-venue: Cherry Pit
-bands: 'Castoff, CSTMR, Rhododendron, Black Ends'
-poster: '/assets/img/posters/BLACK ENDS DEC 20th POSTER.png'
+venue: Black & Loud Fest, LTD Bar & Grill
+link: 'https://www.blackandloudfest.com/event-details/black-loud-fest'
 ---
 
 {% if page.poster %}

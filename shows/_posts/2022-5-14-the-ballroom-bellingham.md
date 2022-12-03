@@ -1,9 +1,8 @@
 ---
 layout: show
-location: Seattle
-venue: Cherry Pit
-bands: 'Castoff, CSTMR, Rhododendron, Black Ends'
-poster: '/assets/img/posters/BLACK ENDS DEC 20th POSTER.png'
+location: Bellingham
+venue: The Ballroom
+poster: '/assets/img/posters/the-ballroom-bellingham.jpg'
 ---
 
 {% if page.poster %}

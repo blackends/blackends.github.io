@@ -1,9 +1,8 @@
 ---
 layout: show
 location: Seattle
-venue: Cherry Pit
-bands: 'Castoff, CSTMR, Rhododendron, Black Ends'
-poster: '/assets/img/posters/BLACK ENDS DEC 20th POSTER.png'
+venue: Clock-Out Lounge
+poster: '/assets/img/posters/blvk-hippie-clock-out.jpg'
 ---
 
 {% if page.poster %}

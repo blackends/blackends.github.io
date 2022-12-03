@@ -1,9 +1,8 @@
 ---
 layout: show
-location: Seattle
-venue: Cherry Pit
-bands: 'Castoff, CSTMR, Rhododendron, Black Ends'
-poster: '/assets/img/posters/BLACK ENDS DEC 20th POSTER.png'
+location: Long Beach
+venue: Que Sera
+poster: '/assets/img/posters/que-sera.jpg'
 ---
 
 {% if page.poster %}
