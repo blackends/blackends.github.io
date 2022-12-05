@@ -1,8 +1,8 @@
 ---
 layout: show
 location: Seattle
-venue: Ballard Vox, Sunset Tavern
-poster: '/assets/img/posters/ballard-vox.jpg'
+venue: The Crocodile
+bands: 'Shannon and the Clams, Black Ends'
 ---
 
 {% if page.poster %}

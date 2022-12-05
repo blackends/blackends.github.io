@@ -1,8 +1,8 @@
 ---
 layout: show
 location: Seattle
-venue: Ballard Vox, Sunset Tavern
-poster: '/assets/img/posters/ballard-vox.jpg'
+venue: Barboza
+poster: '/assets/img/posters/barboza-jayomi.jpg'
 ---
 
 {% if page.poster %}

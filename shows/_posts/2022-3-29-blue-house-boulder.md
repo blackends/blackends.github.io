@@ -1,8 +1,8 @@
 ---
 layout: show
-location: Seattle
-venue: Ballard Vox, Sunset Tavern
-poster: '/assets/img/posters/ballard-vox.jpg'
+location: Boulder
+venue: The Blue House
+poster: '/assets/img/posters/boulder-blue-house.jpg'
 ---
 
 {% if page.poster %}

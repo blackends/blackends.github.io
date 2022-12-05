@@ -1,8 +1,8 @@
 ---
 layout: show
-location: Seattle
-venue: Ballard Vox, Sunset Tavern
-poster: '/assets/img/posters/ballard-vox.jpg'
+location: Albuquerque
+venue: Moonlight Lounge
+poster: '/assets/img/posters/abq-moonlight.jpg'
 ---
 
 {% if page.poster %}

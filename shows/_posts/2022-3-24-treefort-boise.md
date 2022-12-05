@@ -1,8 +1,8 @@
 ---
 layout: show
-location: Seattle
-venue: Ballard Vox, Sunset Tavern
-poster: '/assets/img/posters/ballard-vox.jpg'
+location: Boise
+venue: Treefort, Hops and Bottles
+poster: '/assets/img/posters/treefort-2022.jpg'
 ---
 
 {% if page.poster %}

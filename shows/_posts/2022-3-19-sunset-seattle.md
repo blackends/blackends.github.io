@@ -1,8 +1,9 @@
 ---
 layout: show
 location: Seattle
-venue: Ballard Vox, Sunset Tavern
-poster: '/assets/img/posters/ballard-vox.jpg'
+venue: Sunset Tavern
+bands: 'Prism Bitch, Monsterwatch, Black Ends'
+poster: '/assets/img/posters/prism-bitch-sunset.jpg'
 ---
 
 {% if page.poster %}
