@@ -1,9 +1,8 @@
 ---
 layout: show
-location: Seattle
-venue: Barboza
-bands: 'Nicolle Solo Show'
-poster: '/assets/img/posters/barboza-jayomi.jpg'
+location: Vancouver, BC
+venue: Propulsion
+poster: '/assets/img/posters/the-jins-propulsion.jpg'
 ---
 
 {% if page.poster %}

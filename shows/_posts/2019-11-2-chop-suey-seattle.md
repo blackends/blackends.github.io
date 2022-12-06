@@ -1,9 +1,7 @@
 ---
 layout: show
 location: Seattle
-venue: Barboza
-bands: 'Nicolle Solo Show'
-poster: '/assets/img/posters/barboza-jayomi.jpg'
+venue: Chop Suey
 ---
 
 {% if page.poster %}

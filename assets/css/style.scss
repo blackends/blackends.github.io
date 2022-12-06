@@ -11,6 +11,7 @@ body {
 
 .logo {
     width: 200px;
+    padding-left: 10px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -20,6 +21,24 @@ h1, h2, h3, h4, h5, h6 {
 
 p, ul, ol, table, pre, dl {
   margin:0 0 20px;
+}
+
+p.view {
+    margin: 0;
+    height: 43px;
+    a {
+        padding-left: 10px;
+        padding-right: 10px;
+        line-height: 43px;
+        height: 43px;
+        margin: 0;
+        display: block;
+    }
+    
+    a:hover {
+        background: white;
+        color: black;
+    }
 }
 
 ul {
@@ -56,7 +75,6 @@ a {
 
 a:hover, a:focus {
   color:#069;
-  // font-weight: bold;
   text-decoration: underline;
 }
 
@@ -74,8 +92,8 @@ a:hover small {
 .anchor {
     float: left;
     margin-left: -20px;
-    font-size: 20px;
-    margin-top: -7px;
+    font-size: 16px;
+    margin-top: -3px;
 }
 
 .wrapper {
@@ -237,16 +255,33 @@ footer {
   -webkit-font-smoothing:subpixel-antialiased;
 }
 
-#socials img {
-    width: 20px;
-    margin-right: 15px;
-}
-#socials a:hover {
-    filter: brightness(80%);
-    text-decoration: none;
+#socials {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+
+    a {
+        width: 100%;
+        text-align: center;
+        height: 40px;
+        line-height: 40px;
+    }
+    img {
+        display: inline-block;
+        vertical-align: middle;
+        width: 20px;
+    }
+    a:hover {
+        filter: brightness(75%);
+        text-decoration: none;
+    }
 }
 
 @media print, screen and (max-width: 960px) {
+
+  .logo {
+      padding-left: 0;
+  }
 
   div.wrapper {
     width:auto;
@@ -257,10 +292,6 @@ footer {
     float:none;
     position:static;
     width:auto;
-  }
-
-  header {
-    // padding-right:320px;
   }
 
   section {
@@ -286,7 +317,7 @@ footer {
   }
 
   #socials {
-    // margin-top: 20px;
+      margin-top: 0;
   }
 }
 

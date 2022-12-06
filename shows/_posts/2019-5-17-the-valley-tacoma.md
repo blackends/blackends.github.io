@@ -1,9 +1,7 @@
 ---
 layout: show
-location: Seattle
-venue: Barboza
-bands: 'Nicolle Solo Show'
-poster: '/assets/img/posters/barboza-jayomi.jpg'
+location: Tacoma
+venue: The Valley
 ---
 
 {% if page.poster %}

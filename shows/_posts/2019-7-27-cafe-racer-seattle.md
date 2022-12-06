@@ -1,9 +1,7 @@
 ---
 layout: show
 location: Seattle
-venue: Barboza
-bands: 'Nicolle Solo Show'
-poster: '/assets/img/posters/barboza-jayomi.jpg'
+venue: Cafe Racer
 ---
 
 {% if page.poster %}

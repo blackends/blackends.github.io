@@ -2,8 +2,11 @@
 layout: default
 title: press
 ---
-## [EPK](https://drive.google.com/drive/folders/1x2ruIM24ParliPgWUqqJePIfYAbf7wuA?usp=sharing){:target="_blank"}
+## press
+> ## [EPK](https://drive.google.com/drive/folders/1x2ruIM24ParliPgWUqqJePIfYAbf7wuA?usp=sharing){:target="_blank"}
+
 ---
+## articles
 <ul class="alternate-text-align">
 {% for post in site.categories.press %}
 <li>

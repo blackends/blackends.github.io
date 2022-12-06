@@ -1,9 +1,8 @@
 ---
 layout: show
 location: Seattle
-venue: Barboza
-bands: 'Nicolle Solo Show'
-poster: '/assets/img/posters/barboza-jayomi.jpg'
+venue: Clock-Out Lounge
+link: 'https://www.spl.org/event-calendar?trumbaEmbed=view%3Devent%26eventid%3D133601794'
 ---
 
 {% if page.poster %}

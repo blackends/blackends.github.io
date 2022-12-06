@@ -1,9 +1,8 @@
 ---
 layout: show
 location: Seattle
-venue: Barboza
-bands: 'Nicolle Solo Show'
-poster: '/assets/img/posters/barboza-jayomi.jpg'
+venue: Friend Fest, Werewolf Vacation
+poster: '/assets/img/posters/friend-fest.jpg'
 ---
 
 {% if page.poster %}

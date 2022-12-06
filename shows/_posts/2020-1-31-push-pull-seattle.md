@@ -1,9 +1,8 @@
 ---
 layout: show
 location: Seattle
-venue: Barboza
+venue: Push/Pull
 bands: 'Nicolle Solo Show'
-poster: '/assets/img/posters/barboza-jayomi.jpg'
 ---
 
 {% if page.poster %}

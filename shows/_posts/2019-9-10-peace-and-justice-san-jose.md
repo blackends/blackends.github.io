@@ -1,9 +1,7 @@
 ---
 layout: show
-location: Seattle
-venue: Barboza
-bands: 'Nicolle Solo Show'
-poster: '/assets/img/posters/barboza-jayomi.jpg'
+location: San Jose
+venue: Peace & Justice Center
 ---
 
 {% if page.poster %}

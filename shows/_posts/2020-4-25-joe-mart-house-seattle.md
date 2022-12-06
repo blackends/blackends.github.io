@@ -1,9 +1,7 @@
 ---
 layout: show
 location: Seattle
-venue: Barboza
-bands: 'Nicolle Solo Show'
-poster: '/assets/img/posters/barboza-jayomi.jpg'
+venue: Joe Mart House
 ---
 
 {% if page.poster %}

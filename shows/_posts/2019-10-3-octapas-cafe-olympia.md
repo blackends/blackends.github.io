@@ -1,9 +1,8 @@
 ---
 layout: show
-location: Seattle
-venue: Barboza
-bands: 'Nicolle Solo Show'
-poster: '/assets/img/posters/barboza-jayomi.jpg'
+location: Olympia
+venue: Octapas Cafe
+poster: '/assets/img/posters/weeed.jpg'
 ---
 
 {% if page.poster %}

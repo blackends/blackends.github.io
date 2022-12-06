@@ -1,9 +1,8 @@
 ---
 layout: show
 location: Seattle
-venue: Barboza
-bands: 'Nicolle Solo Show'
-poster: '/assets/img/posters/barboza-jayomi.jpg'
+venue: The Vera Project
+poster: '/assets/img/posters/vera.jpg'
 ---
 
 {% if page.poster %}

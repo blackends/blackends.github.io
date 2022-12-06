@@ -1,9 +1,8 @@
 ---
 layout: show
-location: Seattle
-venue: Barboza
+location: Tacoma
+venue: Space Planet
 bands: 'Nicolle Solo Show'
-poster: '/assets/img/posters/barboza-jayomi.jpg'
 ---
 
 {% if page.poster %}

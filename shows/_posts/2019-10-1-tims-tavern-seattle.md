@@ -1,9 +1,8 @@
 ---
 layout: show
 location: Seattle
-venue: Barboza
-bands: 'Nicolle Solo Show'
-poster: '/assets/img/posters/barboza-jayomi.jpg'
+venue: Tim's Tavern
+poster: '/assets/img/posters/captain-orca.jpg'
 ---
 
 {% if page.poster %}
