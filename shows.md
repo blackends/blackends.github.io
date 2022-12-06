@@ -3,7 +3,8 @@ layout: default
 title: tour dates
 permalink: /tour/
 ---
-## tour dates
+<p class="help"><a href="/2022/12/06/show-project">help!</a></p>
+<h2>tour dates</h2>
 <ul>
 {% for show in site.categories.shows %}
 <li class="show">
