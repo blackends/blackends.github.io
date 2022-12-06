@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Tour Dates
+title: tour dates
 permalink: /tour/
 ---
-## Tour Dates
+## tour dates
 <ul>
 {% for show in site.categories.shows %}
 <li>

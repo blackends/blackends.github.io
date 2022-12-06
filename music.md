@@ -1,8 +1,8 @@
 ---
-title: music
 layout: default
+title: music
 ---
-## Music
+## music
 <ul>
 {% for release in site.categories.music %}
 <a href="{{ release.url }}">

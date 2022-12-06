@@ -1,8 +1,8 @@
 ---
-title: News
 layout: default
+title: news
 ---
-## News
+## news
 <ul>
 {% for post in site.categories.news %}
 <a href="{{ post.url }}">

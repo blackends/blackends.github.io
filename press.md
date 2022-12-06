@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Press
+title: press
 ---
 ## [EPK](https://drive.google.com/drive/folders/1x2ruIM24ParliPgWUqqJePIfYAbf7wuA?usp=sharing){:target="_blank"}
 ---

@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Videos
+title: videos
 ---
-## Videos
+## videos
 <ul>
 {% for video in site.categories.videos %}
 <a href="{{ video.link }}" target="_blank">
