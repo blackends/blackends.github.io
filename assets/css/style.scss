@@ -5,7 +5,7 @@ body {
   background-color: #111;
   padding:50px;
   font: 14px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color:#727272;
+  color: #959595;
   font-weight:400;
 }
 
@@ -353,13 +353,17 @@ footer {
   }
   p.view {
       display: none;
+      opacity: 0;
       text-align: right;
       margin-right: 0;
+      transition: opacity 0.7s;
   }
   p.view.show {
       display: block;
   }
-
+  p.view.fade-in {
+      opacity: 1;
+  }
 
   pre, code {
     word-wrap:normal;

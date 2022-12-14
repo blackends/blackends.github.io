@@ -72,10 +72,14 @@
             if (menu_open) {
                 links.forEach(l => {
                     l.classList.add("show");
+                    setTimeout(() => {
+                        l.classList.add("fade-in");
+                    }, 0);
                 });
             } else {
                 links.forEach(l => {
                     l.classList.remove("show");
+                    l.classList.remove("fade-in");
                 });
             }
         }
