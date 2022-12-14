@@ -21,4 +21,4 @@ permalink: /tour/
 total shows: {{ site.categories.shows | size }}  !
 
 <!-- sorts the shows based on date -->
-<script src="{{ base.url | prepend: site.url }}/assets/js/shows.js"></script>
+<script src="/assets/js/shows.js" type="text/javascript"></script>
