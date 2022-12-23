@@ -1,6 +1,7 @@
 ---
 layout: default
 title: music
+permalink: /music/
 ---
 ## music
 <ul>

@@ -1,6 +1,7 @@
 ---
 title: about
 layout: default
+permalink: /about/
 ---
 ```
 black ends is gunk pop

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: videos
+permalink: /videos/
 ---
 ## videos
 <ul>
