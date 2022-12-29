@@ -20,5 +20,7 @@ permalink: /tour/
 </ul>
 total shows: {{ site.categories.shows | size }}  !
 
+<a href="/map/">map</a>
+
 <!-- sorts the shows based on date -->
 <script src="/assets/js/shows.js" type="text/javascript"></script>
