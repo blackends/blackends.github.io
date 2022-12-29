@@ -6,6 +6,5 @@ plugins:
   - jekyll-remote-theme
 permalink: /:year/:month/:day/:title
 future: true
-logo: /assets/img/belogo-just-black-ends-white-black-bg.svg
 include:
   - _pages

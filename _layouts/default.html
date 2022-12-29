@@ -28,9 +28,8 @@
       <header>
         <a href="#" class="menu" onclick="toggleMenu()"><img src="/assets/img/icons/icons8-menu-squared-50.png" /></a>
 
-        {% if site.logo %}
-        <h1><a href="{{ "/" | absolute_url }}"><img class="logo" src="{{site.logo | relative_url}}" alt="{{ site.title }}" /></a></h1>
-        {% endif %}
+        <a href="{{ "/" | absolute_url }}" title="black ends">{% include logo.html %}</a>
+        <script src="{{ "/assets/js/color-letters.js" | relative_url }}"></script>
 
         <p class="view"><a href="/tour">tour dates</a></p>
         <p class="view"><a href="/music">music</a></p>

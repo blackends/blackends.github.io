@@ -11,6 +11,6 @@ showData.forEach(show => {
         const marker = L.marker([loc.lat, loc.lon]).addTo(map);
         marker.bindPopup(`<b>${show.title}</b>`);
     } else {
-        console.log(show.location);
+        // console.log(show.location);
     }
 });
