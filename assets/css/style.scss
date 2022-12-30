@@ -35,6 +35,37 @@ section {
     height: 45px;
     margin: 0 0 20px;
 }
+svg {
+    overflow: visible;
+}
+.svg-logo path {
+    translate: -193px -150px;
+    transition: translate 1s linear;
+}
+@keyframes meandering {
+    0% { 
+        translate: -193px -150px; 
+    }
+    33% { 
+        translate: -213px -103px; 
+    }
+    50% { 
+        translate: -173px -113px; 
+    }
+    66% {
+        translate: -193px -123px; 
+    }
+    100% { 
+        translate: -173px -133px; 
+    }
+}
+.meander {
+    animation-name: meandering;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(.76,-1.14,.36,1.75);
+    animation-direction: alternate;
+}
 
 h1, h2, h3, h4, h5, h6 {
   color: #222;
