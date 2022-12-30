@@ -17,8 +17,8 @@ function randomColor(current='') {
     return color;
 }
 
-const container = document.querySelector(".svg-logo");
-const letters = [...document.querySelectorAll('.letter')];
+const container = document.querySelector("#black-ends-logo");
+const letters = [...document.querySelectorAll('.black-ends-logo-letter')];
 let interval;
 
 function checkMagic() {
