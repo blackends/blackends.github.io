@@ -19,16 +19,7 @@ function randomColor(current='') {
 
 const container = document.querySelector("#black-ends-logo");
 const letters = [...document.querySelectorAll('.black-ends-logo-letter')];
-let interval;
-
-function checkMagic() {
-    console.log('checking for magic')
-    if (allColorsMatch()) {
-        applyMagic()
-    } else {
-        removeMagic();
-    }
-}
+let animationClass = colors[0];
 
 function allColorsMatch() {
     const color = letters[0].style.fill;
@@ -36,44 +27,52 @@ function allColorsMatch() {
 }
 
 function applyMagic() {
-    console.log('apply magic')
-    if (!letters.some(l => l.classList.contains('meander'))) {
-        console.log('magic not applied yet')
+    if (!letters.some(l => l.classList.contains(animationClass))) {
+        animationClass = letters[0].style.fill;
         let t = 0;
         letters.forEach(l => {
-            t += 1750;
+            t += 1000;
             setTimeout(() => {
-                l.classList.add('meander');
-            }, t)
+                l.classList.add(animationClass);
+            }, t);
         });
     }
 }
 
 function removeMagic() {
-    console.log('remove magic')
     letters.forEach(l => {
-        l.classList.remove('meander');
+        if (l.classList.contains(animationClass)) {
+            const style = getComputedStyle(l);
+            const computedTranslate = style.getPropertyValue('translate');
+            l.style.translate = computedTranslate;
+            l.classList.remove(animationClass);
+            setTimeout(() => {
+                l.style.translate = '0px 0px';
+            }, 0);
+        }
     });
 }
 
-function resetInterval() {
-    console.log('reset interval')
-    clearInterval(interval);
-    interval = setInterval(() => {
-        checkMagic();
-    }, 5000);
+let timeout;
+function checkMagic() {
+    if (allColorsMatch()) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => {
+            if (allColorsMatch()) {
+                applyMagic();
+            }
+        }, 5000);
+    } else {
+        removeMagic();
+    }
 }
 
 letters.forEach(l => {
     l.style.fill = randomColor();
     l.addEventListener('mouseover', e => {
-        console.log('moused over, changing color')
-        e.target.style.fill = randomColor(e.target.style.fill)
-        removeMagic();
-        resetInterval();
+        e.target.style.fill = randomColor(e.target.style.fill);
+        checkMagic();
     });
 });
-
 checkMagic();
-resetInterval();
 
