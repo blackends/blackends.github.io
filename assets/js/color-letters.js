@@ -13,7 +13,7 @@ const colors = [
 function randomColor(current='') {
     do {
         var color = colors[randomInt(0, colors.length - 1)];
-    } while(color == current)
+    } while (color == current)
     return color;
 }
 
@@ -31,7 +31,7 @@ function applyMagic() {
         animationClass = letters[0].style.fill;
         let t = 0;
         letters.forEach(l => {
-            t += 1000;
+            t += randomInt(500, 1500);
             setTimeout(() => {
                 l.classList.add(animationClass);
             }, t);
