@@ -1,6 +1,6 @@
 ---
 layout: show
-location: Ubersee, DE
+location: Übersee, DE
 venue: Freiarum
 ---
 

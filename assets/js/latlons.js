@@ -35,4 +35,68 @@ const latlons = {
         lat: 51.454514,
         lon: -2.587910
     },
+    "Barnsley, UK": {
+        lat: 53.5547,
+        lon: -1.4791
+    },
+    "Manchester, UK": {
+        lat: 53.479444,
+        lon: -2.245278
+    },
+    "Paris, FR": {
+        lat: 48.856613,
+        lon: 2.352222
+    },
+    "Troyes, FR": {
+        lat: 48.2997,
+        lon: 4.0792
+    },
+    "Marseille, FR": {
+        lat: 43.2964,
+        lon: 5.37
+    },
+    "Zagreb, HR": {
+        lat: 45.816667,
+        lon: 15.983333
+    },
+    "Budapest, HU": {
+        lat: 47.4925,
+        lon: 19.051389
+    },
+    "Übersee, DE": {
+        lat: 47.816667,
+        lon: 12.466667
+    },
+    "Kassel, DE": {
+        lat: 51.3158,
+        lon: 9.4979
+    },
+    "Dortmund, DE": {
+        lat: 51.516667,
+        lon: 7.466667
+    },
+    "Hamburg, DE": {
+        lat: 53.55,
+        lon: 10
+    },
+    "Kusel, DE": {
+        lat: 49.534722,
+        lon: 7.398056
+    },
+    "Esbjerg, DK": {
+        lat: 55.483333,
+        lon: 8.45
+    },
+    "Svendbord, DK": {
+        lat: 55.059444,
+        lon: 10.608333
+    },
+    "Copenhagen, DK": {
+        lat: 55.676111,
+        lon: 12.568333
+    },
+    "Berlin, DE": {
+        lat: 52.52,
+        lon: 13.405
+    },
 };
