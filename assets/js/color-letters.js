@@ -9,6 +9,28 @@ const colors = [
     'gold',
     'forestgreen'
 ];
+const anagrams = [
+    'bled snack',
+    'elk nabs cd',
+    'bed clanks',
+    'ben slackd',
+    'blend sack',
+    'bald necks',
+    'lsd backne'
+];
+const relativeLetterPos = {
+    b: { x: 0, y: 0 },
+    l: { x: -130, y: 0 },
+    a: { x: -260, y: 0 },
+    c: { x: -380, y: 30 },
+    k: { x: -510, y: 50 },
+    e: { x: -720, y: 50 },
+    n: { x: -850, y: 60 },
+    d: { x: -1010, y: 30 },
+    s: { x: -1160, y: 10 }
+};
+const letterWidth = 135,
+    spaceWidth = 100;
 
 function randomColor(current='') {
     do {
@@ -29,14 +51,49 @@ function allColorsMatch() {
 function applyMagic() {
     if (!letters.some(l => l.classList.contains(animationClass))) {
         animationClass = letters[0].style.fill;
-        let t = 0;
-        letters.forEach(l => {
-            t += randomInt(500, 1500);
-            setTimeout(() => {
-                l.classList.add(animationClass);
-            }, t);
-        });
+        if (animationClass == 'crimson') {
+            applyAnagram();
+        } else {
+            let t = 0;
+            letters.forEach(l => {
+                t += randomInt(500, 1500);
+                setTimeout(() => {
+                    l.classList.add(animationClass);
+                }, t);
+            });
+        }
     }
+}
+
+function applyAnagram() {
+    const anagram = selectAnagram();
+    let currentXpos = 0;
+    for (let i = 0; i < anagram.length; i++) {
+        const letter = anagram[i];
+        if (letter != ' ') {
+            const elt = letters.find(l => 
+                l.id.toLowerCase() == `black-ends-logo-${letter}`);
+            elt.classList.add(animationClass);
+            const relPos = relativeLetterPos[letter];
+            elt.style.translate = 
+                `${relPos.x + currentXpos}px ${relPos.y}px`;
+            currentXpos += letterWidth;
+        } else {
+            currentXpos += spaceWidth;
+        }
+    }
+}
+
+let usedAnagrams = [];
+function selectAnagram() {
+    if (usedAnagrams.length == anagrams.length) {
+        usedAnagrams = [];
+    }
+    do {
+        var anagram = anagrams[randomInt(0, anagrams.length - 1)];
+    } while (usedAnagrams.includes(anagram))
+    usedAnagrams.push(anagram);
+    return anagram;
 }
 
 function removeMagic() {

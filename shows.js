@@ -28,15 +28,16 @@ let nextShow = allShows[0];
 
 // find next show
 allShows.forEach(s => {
-    if (now <= getComparisonDate(s) && 
-        (getComparisonDate(s) - now) < 
-        (getComparisonDate(nextShow) - now)) {
+    const thisShowDate = getComparisonDate(s),
+        nextShowDate = getComparisonDate(nextShow);
+    if (s !== nextShow &&
+        now <= thisShowDate && 
+        (thisShowDate - now) < 
+        (nextShowDate - now)) {
         // if the show is in the future, and the distance between now and the show is the smallest
         nextShow = s;
     }
 });
-
-nextShow = allShows[0];
 
 const li = document.querySelector(".next-show");
 

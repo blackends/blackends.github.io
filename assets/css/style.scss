@@ -37,37 +37,11 @@ section {
 }
 #black-ends-logo .black-ends-logo-letter {
     translate: 0px 0px;
-    transition: translate 1s cubic-bezier(.76,-1.14,.36,1.75), filter 1s, fill .05s;
+    transition: translate 1s ease, filter 1s, fill .05s;
 }
 
-@keyframes crimson {
-    0% { 
-        translate: 0px 0px; 
-        filter: brightness(1) drop-shadow(0px 0px 0px crimson);
-    }
-    33% { 
-        translate: -50px 25px; 
-        filter: brightness(1.25) drop-shadow(0px 0px 100px crimson);
-    }
-    50% { 
-        translate: 20px 0px; 
-        filter: brightness(1.5) drop-shadow(0px 0px 0px crimson);
-    }
-    66% {
-        translate: 0px 50px; 
-        filter: brightness(1.25) drop-shadow(0px 0px 100px crimson);
-    }
-    100% { 
-        translate: -20px 20px; 
-        filter: brightness(1) drop-shadow(0px 0px 0px crimson);
-    }
-}
-.crimson {
-    animation-name: crimson;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    animation-timing-function: cubic-bezier(.76,-1.14,.36,1.75);
-    animation-direction: alternate;
+#black-ends-logo .black-ends-logo-letter.crimson {
+    transition: translate 7s ease;
 }
 
 @keyframes royalblue {
@@ -100,18 +74,22 @@ section {
     0% { 
         fill: gold;
         translate: 0px 0px; 
+        filter: drop-shadow(0px 0px 0px white);
     }
     33% { 
         fill: forestgreen;
         translate: 0px -50px; 
+        filter: drop-shadow(0px 0px 70px white);
     }
     66% {
         fill: royalblue;
         translate: 0px 0px; 
+        filter: drop-shadow(0px 0px 0px white);
     }
     100% { 
         fill: crimson;
         translate: 0px 50px; 
+        filter: drop-shadow(0px 0px 70px white);
     }
 }
 .gold {
