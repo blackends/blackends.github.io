@@ -74,22 +74,22 @@ section {
     0% { 
         fill: gold;
         translate: 0px 0px; 
-        filter: drop-shadow(0px 0px 0px white);
+        filter: drop-shadow(0px 0px 0px gold);
     }
     33% { 
         fill: forestgreen;
         translate: 0px -50px; 
-        filter: drop-shadow(0px 0px 70px white);
+        filter: drop-shadow(0px 0px 70px forestgreen);
     }
     66% {
         fill: royalblue;
         translate: 0px 0px; 
-        filter: drop-shadow(0px 0px 0px white);
+        filter: drop-shadow(0px 0px 0px royalblue);
     }
     100% { 
         fill: crimson;
         translate: 0px 50px; 
-        filter: drop-shadow(0px 0px 70px white);
+        filter: drop-shadow(0px 0px 70px crimson);
     }
 }
 .gold {
@@ -384,6 +384,7 @@ footer {
 .menu {
     display: none;
     float: right;
+    height: 55px;
 }
 
 @media print, screen and (max-width: 960px) {

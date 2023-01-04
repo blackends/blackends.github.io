@@ -39,11 +39,18 @@ allShows.forEach(s => {
     }
 });
 
+// <h3><a href="{{ show.url }}"><span class="date">{{ show.date | date: "%m/%-d/%Y" }}</span>, <span class="location">{{ show.location }}</span>, {{ show.venue }}</a></h3>
+
 const li = document.querySelector(".next-show");
 
 const h2 = document.createElement("h2");
-h2.textContent = `next show: ${nextShow.title}`;
+h2.textContent = `next show: `;
 li.appendChild(h2);
+
+const a = document.createElement("a");
+a.href = "/tour/";
+a.textContent = `${nextShow.title}`;
+h2.appendChild(a);
 
 if (nextShow.poster) {
     const p  = document.createElement("p");
