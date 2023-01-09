@@ -1,4 +1,100 @@
 const latlons = {
+    "Corvallis": {
+        lat: 44.566667,
+        lon: -123.283333
+    },
+    "Oakland": {
+        lat: 37.804444,
+        lon: -122.270833
+    },
+    "Tukwila": {
+        lat: 47.478333,
+        lon: -122.275556
+    },
+    "Everett": {
+        lat: 47.979167,
+        lon: -122.201667
+    },
+    "Victoria, BC": {
+        lat: 48.428333,
+        lon: -123.364722
+    },
+    "Boise": {
+        lat: 43.615833,
+        lon: -116.201667
+    },
+    "Salt Lake City": {
+        lat: 40.760833,
+        lon: -111.891111
+    },
+    "Laramie": {
+        lat: 41.311111,
+        lon: -105.593611
+    },
+    "Boulder": {
+        lat: 40.015,
+        lon: -105.270556
+    },
+    "Denver": {
+        lat: 39.7392,
+        lon: -104.985
+    },
+    "Albuquerque": {
+        lat: 35.110833,
+        lon: -106.61
+    },
+    "Tuscon": {
+        lat: 32.221667,
+        lon: -110.926389
+    },
+    "Tempe": {
+        lat: 33.412778,
+        lon: -111.943056
+    },
+    "Los Angeles": {
+        lat: 34.05,
+        lon: -118.25
+    },
+    "San Diego": {
+        lat: 32.715,
+        lon: -117.1625
+    },
+    "Olympia": {
+        lat: 47.037778,
+        lon: -122.900833
+    },
+    "Santa Ana": {
+        lat: 33.740833,
+        lon: -117.881389
+    },
+    "Long Beach": {
+        lat: 33.768333,
+        lon: -118.195556
+    },
+    "Sacramento": {
+        lat: 38.581667,
+        lon: -121.494444
+    },
+    "San Francisco": {
+        lat: 37.7775,
+        lon: -122.416389
+    },
+    "San Jose": {
+        lat: 37.336111,
+        lon: -121.890556
+    },
+    "Reno": {
+        lat: 39.527222,
+        lon: -119.821944
+    },
+    "Chico": {
+        lat: 39.74,
+        lon: -121.835556
+    },
+    "Eugene": {
+        lat: 44.051944,
+        lon: -123.086667
+    },
     "Bremerton": {
         lat: 47.5673202,
         lon: -122.6329356

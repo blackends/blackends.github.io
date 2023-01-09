@@ -3,8 +3,7 @@ layout: default
 title: tour map
 permalink: /map/
 ---
-WIP
-
+## where have we played?
 <!-- Leaflet's CSS -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
@@ -28,7 +27,9 @@ const showData = [
         title: "{{ show.title }}",
         venue: "{{ show.venue }}",
         date: "{{ show.date }}",
+        displayDate: '{{ show.date | date: "%m/%-d/%Y" }}',
         location: "{{ show.location }}",
+        url: "{{ show.url }}",
         poster: "{{ show.poster }}",
     },
 {% endfor %}
