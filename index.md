@@ -2,10 +2,10 @@
 layout: default
 title: black ends
 ---
-
 <ul>
 <li class="next-show"></li>
 {% for post in site.tags.pinned %}
+<li><hr /></li>
 <li>
 <h2>{{ post.title }}</h2>
 {{ post.content }}

@@ -31,6 +31,7 @@ section {
 #black-ends-logo {
     display: block;
     padding: 0 0 10px 10px;
+    margin-bottom: 10px;
     height: 45px;
     width: 200px;
     overflow: visible;
@@ -343,9 +344,12 @@ small {
 }
 
 hr {
-  border:0;
-  background:#e5e5e5;
-  height:1px;
+  border-top: dashed 1px #e5e5e5;
+  border-right: none;
+  border-bottom: none;
+  border-left: none;
+  background: transparent;
+  height:0px;
   margin:0 0 20px;
 }
 
