@@ -31,13 +31,38 @@
         <a href="{{ "/" | absolute_url }}" title="black ends">{% include logo.svg %}</a>
         <script src="{{ "/assets/js/color-letters.js" | relative_url }}"></script>
 
-        <p class="view"><a href="/tour">tour dates</a></p>
-        <p class="view"><a href="/music">music</a></p>
-        <p class="view"><a href="/videos">videos</a></p>
-        <p class="view"><a href="/news">news</a></p>
-        <p class="view"><a href="/press">press</a></p>
-        <p class="view"><a href="/about">about</a></p>
-        <p class="view"><a href="mailto:blackendsmusic@gmail.com" target="_blank" rel="noopener noreferrer">contact</a></p>
+        <nav>
+            <p class="view"><a href="/tour">tour dates</a></p>
+            <p class="view"><a href="/music">music</a></p>
+            <p class="view"><a href="/videos">videos</a></p>
+            <p class="view"><a href="/news">news</a></p>
+            <p class="view"><a href="/press">press</a></p>
+            <p class="view"><a href="/about">about</a></p>
+            <p class="view"><a href="mailto:blackendsmusic@gmail.com" target="_blank" rel="noopener noreferrer">contact</a></p>
+        </nav>
+        <script>
+            const nav = document.querySelector("nav");
+            let menu_open = false;
+            function toggleMenu() {
+                // debounce the close (do not need to debounce open)
+                if (!(nav.classList.contains("fade-out") && nav.classList.contains("show"))) {
+                    menu_open = !menu_open;
+                    if (menu_open) {
+                        nav.classList.add("show");
+                        setTimeout(() => {
+                            nav.classList.add("fade-in");
+                        }, 0);
+                    } else {
+                        nav.classList.add("fade-out");
+                        setTimeout(() => {
+                            nav.classList.remove("fade-out");
+                            nav.classList.remove("fade-in");
+                            nav.classList.remove("show");
+                        }, 700);
+                    }
+                }
+            }
+        </script>
 
         <div class="socials">
             {% for social in site.data.socials %}
@@ -63,26 +88,6 @@
         </div>
       </footer>
     </div>
-    <script>
-        const links = document.querySelectorAll(".view");
-        let menu_open = false;
-        function toggleMenu() {
-            menu_open = !menu_open;
-            if (menu_open) {
-                links.forEach(l => {
-                    l.classList.add("show");
-                    setTimeout(() => {
-                        l.classList.add("fade-in");
-                    }, 0);
-                });
-            } else {
-                links.forEach(l => {
-                    l.classList.remove("show");
-                    l.classList.remove("fade-in");
-                });
-            }
-        }
-    </script>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
   </body>
 </html>
