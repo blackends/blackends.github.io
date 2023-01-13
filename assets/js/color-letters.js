@@ -61,7 +61,7 @@ function superMagicMatch() {
     const strLetters = 'blackends'.split('');
     for (let i = 0; i < strLetters.length; i++) {
         const letter = strLetters[i];
-        const elt = letters.find(l => 
+        const elt = letters.find(l =>
             l.id.toLowerCase() == `black-ends-logo-${letter}`);
         match &= elt.style.fill == colors[answer[i]];
     }
