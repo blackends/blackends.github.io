@@ -50,19 +50,33 @@ function allColorsMatch() {
 
 function applyMagic() {
     if (!letters.some(l => l.classList.contains(animationClass))) {
-        animationClass = letters[0].style.fill;
-        if (animationClass == 'crimson') {
-            applyAnagram();
-        } else {
-            let t = 0;
-            letters.forEach(l => {
-                t += randomInt(500, 1500);
-                setTimeout(() => {
-                    l.classList.add(animationClass);
-                }, t);
-            });
-        }
+        animationClass = 'anagram';
+        applyAnagram();
     }
+}
+
+function superMagicMatch() {
+    const answer = [0,3,2,1,1,2,0,1,3]
+    let match = true;
+    const strLetters = 'blackends'.split('');
+    for (let i = 0; i < strLetters.length; i++) {
+        const letter = strLetters[i];
+        const elt = letters.find(l => 
+            l.id.toLowerCase() == `black-ends-logo-${letter}`);
+        match &= elt.style.fill == colors[answer[i]];
+    }
+    return match;
+}
+
+function applySuperMagic() {
+    animationClass = 'super';
+    let t = 0;
+    letters.forEach(l => {
+        t += randomInt(500, 1500);
+        setTimeout(() => {
+            l.classList.add('super');
+        }, t);
+    });
 }
 
 function applyAnagram() {
@@ -112,10 +126,12 @@ function removeMagic() {
 
 let timeout;
 function checkMagic() {
-    if (allColorsMatch()) {
+    if (superMagicMatch() || allColorsMatch()) {
         clearTimeout(timeout);
         timeout = setTimeout(() => {
-            if (allColorsMatch()) {
+            if (superMagicMatch()) {
+                applySuperMagic();
+            } else if (allColorsMatch()) {
                 applyMagic();
             }
         }, 5000);

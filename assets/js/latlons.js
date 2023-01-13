@@ -195,4 +195,8 @@ const latlons = {
         lat: 52.52,
         lon: 13.405
     },
+    "Hull, UK": {
+        lat: 53.744444,
+        lon: -0.3325
+    }
 };

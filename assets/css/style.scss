@@ -41,43 +41,17 @@ section {
     transition: translate 1s ease, filter 1s, fill .05s;
 }
 
-#black-ends-logo .black-ends-logo-letter.crimson {
+#black-ends-logo .black-ends-logo-letter.anagram {
     transition: translate 7s ease;
 }
 
-@keyframes royalblue {
-    0% { 
-        translate: 0px 0px; 
-        filter: brightness(1) drop-shadow(0px 0px 0px royalblue);
-    }
-    33% { 
-        translate: 0px -50px; 
-        filter: brightness(1.5) drop-shadow(0px 0px 33px royalblue);
-    }
-    66% { 
-        translate: 0px 0px; 
-        filter: brightness(2) drop-shadow(0px 0px 66px royalblue);
-    }
-    100% { 
-        translate: 0px 50px; 
-        filter: brightness(2.5) drop-shadow(0px 0px 100px royalblue);
-    }
-}
-.royalblue {
-    animation-name: royalblue;
-    animation-duration: 7s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-direction: alternate;
-}
-
-@keyframes gold {
-    0% { 
+@keyframes super {
+    0% {
         fill: gold;
         translate: 0px 0px; 
         filter: drop-shadow(0px 0px 0px gold);
     }
-    33% { 
+    33% {
         fill: forestgreen;
         translate: 0px -50px; 
         filter: drop-shadow(0px 0px 70px forestgreen);
@@ -87,43 +61,17 @@ section {
         translate: 0px 0px; 
         filter: drop-shadow(0px 0px 0px royalblue);
     }
-    100% { 
+    100% {
         fill: crimson;
         translate: 0px 50px; 
         filter: drop-shadow(0px 0px 70px crimson);
     }
 }
-.gold {
-    animation-name: gold;
+.super {
+    animation-name: super;
     animation-duration: 7s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    animation-direction: alternate;
-}
-
-@keyframes forestgreen {
-    0% { 
-        translate: 0px 0px; 
-        filter: brightness(1) drop-shadow(0px 0px 0px forestgreen);
-    }
-    33% { 
-        translate: 50px 0px; 
-        filter: brightness(1.5) drop-shadow(0px 0px 33px forestgreen);
-    }
-    66% { 
-        translate: 0px 0px; 
-        filter: brightness(2) drop-shadow(0px 0px 66px forestgreen);
-    }
-    100% { 
-        translate: 50px 0px; 
-        filter: brightness(2.5) drop-shadow(0px 0px 100px forestgreen);
-    }
-}
-.forestgreen {
-    animation-name: forestgreen;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease;
     animation-direction: alternate;
 }
 // END LOGO

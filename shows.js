@@ -10,6 +10,7 @@ const allShows = [
         machine: "{{ post.date | date: '%Y-%m-%d' }}"
       },
       poster: "{{ post.poster }}",
+      bands: "{{ post.bands }}",
       url: "{{ post.url }}",
       title: "{{ post.date | date: '%m/%-d/%Y' }}, {{ post.location }}, {{ post.venue }}"
     }{% unless forloop.last %},{% endunless %}
@@ -49,6 +50,12 @@ const a = document.createElement("a");
 a.href = "/tour/";
 a.textContent = `${nextShow.title}`;
 h2.appendChild(a);
+
+if (nextShow.bands) {
+    const p  = document.createElement("p");
+    p.textContent = nextShow.bands;
+    li.appendChild(p);
+}
 
 if (nextShow.poster) {
     const p  = document.createElement("p");
