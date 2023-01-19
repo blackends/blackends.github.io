@@ -12,6 +12,7 @@ const allShows = [
       poster: "{{ post.poster }}",
       bands: "{{ post.bands }}",
       url: "{{ post.url }}",
+      link: "{{ post.link }}",
       title: "{{ post.date | date: '%m/%-d/%Y' }}, {{ post.location }}, {{ post.venue }}"
     }{% unless forloop.last %},{% endunless %}
   {% endfor %}
@@ -47,7 +48,7 @@ h2.textContent = `next show: `;
 li.appendChild(h2);
 
 const a = document.createElement("a");
-a.href = "/tour/";
+a.href = nextShow.link ? nextShow.link : "/tour/";
 a.textContent = `${nextShow.title}`;
 h2.appendChild(a);
 
