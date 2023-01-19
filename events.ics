@@ -1,0 +1,18 @@
+---
+---
+
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ZContent.net//Zap Calendar 1.0//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+{% for show in site.categories.shows %}BEGIN:VEVENT
+UID:{{ show.date | date: "%m%-d%Y" }}
+SUMMARY:{{ show.location }}, {{ show.venue }}
+DTSTART:{{ show.date | date: "%Y%m%d" }}
+DTSTAMP:{{ show.date | date: "%Y%m%dT%H%M%S" }}
+LOCATION:{{ show.location }}
+DESCRIPTION:{{ show.bands }}
+URL:{{ show.link }}
+END:VEVENT
+{% endfor %}END:VCALENDAR
