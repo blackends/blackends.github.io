@@ -6,6 +6,8 @@ VERSION:2.0
 PRODID:-//ZContent.net//Zap Calendar 1.0//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
+X-WR-CALNAME:Black Ends Shows
+X-WR-TIMEZONE:America/Los_Angeles
 {% for show in site.categories.shows %}BEGIN:VEVENT
 UID:{{ show.date | date: "%m%-d%Y" }}
 SUMMARY:{{ show.location }}, {{ show.venue }}
