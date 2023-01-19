@@ -14,7 +14,6 @@ SUMMARY:{{ show.location }}, {{ show.venue }}
 DTSTART:{{ show.date | date: "%Y%m%d" }}
 DTSTAMP:{{ show.date | date: "%Y%m%dT%H%M%S" }}
 LOCATION:{{ show.location }}
-DESCRIPTION:{{ show.bands }}
-URL:{{ show.link }}
+DESCRIPTION:{{ show.bands }}\n{{ show.link }}
 END:VEVENT
 {% endfor %}END:VCALENDAR

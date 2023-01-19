@@ -39,9 +39,16 @@ function randomColor(current='') {
     return color;
 }
 
+const link = document.querySelector("#logo-link");
 const container = document.querySelector("#black-ends-logo");
 const letters = [...document.querySelectorAll('.black-ends-logo-letter')];
 let animationClass = colors[0];
+
+if (window.location.pathname === '/') {
+    link.removeChild(container);
+    link.parentNode.insertBefore(container, link);
+    link.parentNode.removeChild(link);
+}
 
 function allColorsMatch() {
     const color = letters[0].style.fill;
