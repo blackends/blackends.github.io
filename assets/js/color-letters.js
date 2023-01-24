@@ -147,12 +147,15 @@ function checkMagic() {
     }
 }
 
+function letterInteract(e) {
+    e.target.style.fill = randomColor(e.target.style.fill);
+    checkMagic();
+}
+
 letters.forEach(l => {
     l.style.fill = randomColor();
-    l.addEventListener('mouseover', e => {
-        e.target.style.fill = randomColor(e.target.style.fill);
-        checkMagic();
-    });
+    l.addEventListener('mouseover', letterInteract);
+    l.addEventListener('click', letterInteract);
 });
 checkMagic();
 
