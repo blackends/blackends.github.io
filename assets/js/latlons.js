@@ -198,5 +198,17 @@ const latlons = {
     "Hull, UK": {
         lat: 53.744444,
         lon: -0.3325
+    },
+    "Northampton, UK": {
+        lat: 52.230375,
+        lon: -0.893753
+    },
+    "Vannes, FR": {
+        lat: 47.6559,
+        lon: -2.7603
+    },
+    "Nantes, FR": {
+        lat: 47.2181,
+        lon: -1.5528
     }
 };
