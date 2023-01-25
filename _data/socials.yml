@@ -17,3 +17,7 @@
 - title: 'apple music'
   href: 'https://music.apple.com/us/artist/black-ends/1456795717'
   img: '/assets/img/icons/apple.svg'
+
+- title: 'youtube'
+  href: 'https://www.youtube.com/@blackends7198'
+  img: '/assets/img/icons/youtube.svg'
