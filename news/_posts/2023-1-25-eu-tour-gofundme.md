@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Get Black Ends to Europe April 2023!
 tags: pinned
 ---
