@@ -1,5 +1,5 @@
 - title: 'instagram'
-  href: 'https://www.instagram.com/black.ends/'
+  href: 'https://www.instagram.com/black.ends'
   img: '/assets/img/icons/instagram.svg'
 
 - title: 'twitter'
@@ -7,11 +7,11 @@
   img: '/assets/img/icons/twitter.svg'
 
 - title: 'bandcamp'
-  href: 'https://blackends.bandcamp.com/'
+  href: 'https://blackends.bandcamp.com'
   img: '/assets/img/icons/bandcamp.svg'
 
 - title: 'spotify'
-  href: 'https://open.spotify.com/artist/5D8NXuzLwBMIZuL8o6U8q3?si=GsnGZg6ZQvmFIV53UN18qQ'
+  href: 'https://open.spotify.com/artist/5D8NXuzLwBMIZuL8o6U8q3'
   img: '/assets/img/icons/spotify.svg'
 
 - title: 'apple music'
