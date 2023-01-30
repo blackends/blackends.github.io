@@ -8,4 +8,4 @@ tags: pinned
 
 ![nicolle-billie-ben](/assets/img/nicolle-billie-ben.jpg)
 
-<div class="gfm-embed" data-url="https://www.gofundme.com/f/get-black-ends-to-europe-2023/widget/small/"></div><script defer src="https://www.gofundme.com/static/js/embed.js"></script>
+<div class="gfm-embed" data-url="https://www.gofundme.com/f/get-black-ends-to-europe-2023/widget/medium/"></div><script defer src="https://www.gofundme.com/static/js/embed.js"></script>
