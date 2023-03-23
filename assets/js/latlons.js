@@ -210,5 +210,13 @@ const latlons = {
     "Nantes, FR": {
         lat: 47.2181,
         lon: -1.5528
-    }
+    },
+    "Rennes, FR": {
+        lat: 48.1147,
+        lon: -1.6794
+    },
+    "Husum, DE": {
+        lat: 54.466667,
+        lon: 9.05
+    },
 };
