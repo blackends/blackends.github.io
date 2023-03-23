@@ -14,6 +14,6 @@ SUMMARY:black ends @ {{ show.venue }}, {{ show.location }}
 DTSTART:{{ show.date | date: "%Y%m%d" }}
 DTSTAMP:{{ show.date | date: "%Y%m%dT%H%M%S" }}
 LOCATION:{{ show.location }}
-DESCRIPTION:{{ show.bands }}\n{{ show.link }}
+DESCRIPTION:{{ show.bands }} {{ show.link }}
 END:VEVENT
 {% endfor %}END:VCALENDAR
