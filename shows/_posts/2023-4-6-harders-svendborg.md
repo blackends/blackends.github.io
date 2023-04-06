@@ -1,6 +1,6 @@
 ---
 layout: show
-location: Svendbord, DK
+location: Svendborg, DK
 venue: Harders
 ---
 
