@@ -183,7 +183,7 @@ const latlons = {
         lat: 55.483333,
         lon: 8.45
     },
-    "Svendbord, DK": {
+    "Svendborg, DK": {
         lat: 55.059444,
         lon: 10.608333
     },
