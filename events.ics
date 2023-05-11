@@ -9,7 +9,7 @@ METHOD:PUBLISH
 X-WR-CALNAME:Black Ends Shows
 X-WR-TIMEZONE:America/Los_Angeles
 {% for show in site.categories.shows %}BEGIN:VEVENT
-UID:{{ show.date | date: "%m%-d%Y" }}
+UID:be{{ show.date | date: "%m%-d%Y" }}
 ORGANIZER:mailto:blackendsmusic@gmail.com
 SUMMARY:black ends @ {{ show.venue }}, {{ show.location }}
 DTSTART:{{ show.date | date: "%Y%m%d" }}
