@@ -4,6 +4,7 @@ title: tour dates
 permalink: /tour/
 ---
 <p class="help"><a href="/map/">map</a></p>
+<p class="help"><a href="/calendar/">cal</a>&nbsp;</p>
 <h2>tour dates</h2>
 <ul class="future-container">
 {% for show in site.categories.shows %}
