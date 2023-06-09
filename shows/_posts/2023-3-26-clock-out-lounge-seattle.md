@@ -7,8 +7,3 @@ link: https://www.ticketweb.com/event/clock-out-lounge-presents-black-clock-out-
 poster: /assets/img/posters/2023-3-26-clockout-seattle.jpg
 ---
 
-{% if page.poster %}
-![{{ page.date | date: "%m/%-d/%Y" }}, {{ page.location }}, {{ page.venue }}]({{ page.poster }})
-{% else %}
-{{ page.bands }}
-{% endif %}

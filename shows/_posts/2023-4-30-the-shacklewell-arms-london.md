@@ -2,10 +2,6 @@
 layout: show
 location: London, UK
 venue: The Shacklewell Arms
+youtube: k5SR2gl78GA
 ---
 
-{% if page.poster %}
-![{{ page.date | date: "%m/%-d/%Y" }}, {{ page.location }}, {{ page.venue }}]({{ page.poster }})
-{% else %}
-{{ page.bands }}
-{% endif %}

@@ -41,4 +41,5 @@ Object.keys(showsByLocation).forEach(locKey => {
     } else {
         console.log("Missing lat/lon: " + locKey);
     }
-})
+});
+

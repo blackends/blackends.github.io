@@ -3,15 +3,34 @@ layout: default
 title: tour dates
 permalink: /tour/
 ---
-<p class="help"><a href="/map/">map</a></p>
-<p class="help"><a href="/calendar/">cal</a>&nbsp;</p>
+<p class="help"><a href="/map/">🌍</a></p>
+<p class="help"><a href="/calendar/">📅</a>&nbsp;</p>
 <h2>tour dates</h2>
 <ul class="future-container">
 {% for show in site.categories.shows %}
 <li class="show">
 <a class="anchor" id="{{ show.date | date: "%m%-d%Y" }}" name="{{ show.date | date: "%m%-d%Y" }}" href="#{{ show.date | date: "%m%-d%Y" }}">#</a>
 <h3><a href="{{ show.url }}"><span class="date">{{ show.date | date: "%m/%-d/%Y" }}</span>, <span class="location">{{ show.location }}</span>, {{ show.venue }}</a></h3>
-{{ show.content }}
+{% if show.link %}
+{% if show.bands %}
+<a href="{{ show.link }}" target="_blank"><p>🔗 {{ show.bands }}</p></a>
+{% else %}
+<a href="{{ show.link }}" target="_blank"><p>🔗 Event Link</p></a>
+{% endif %}
+{% else %}
+{% if show.bands %}
+<p>{{ show.bands }}</p>
+{% endif %}
+{% endif %}
+{% if show.poster %}
+{% if show.link %}
+<a href="{{ show.link }}" target="_blank">
+{% endif %}
+<img src="{{ show.poster }}" alt="{{ show.date | date: "%m/%-d/%Y" }}, {{ show.location }}, {{ show.venue }}">
+{% if show.link %}
+</a>
+{% endif %}
+{% endif %}
 </li>
 {% endfor %}
 </ul>

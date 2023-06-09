@@ -7,8 +7,3 @@ link: 'https://www.ticketweb.com/event/kexp-presents-slang-black-ends-sunset-tav
 poster: '/assets/img/posters/slang-rc-sunset.jpg'
 ---
 
-{% if page.poster %}
-![{{ page.date | date: "%m/%-d/%Y" }}, {{ page.location }}, {{ page.venue }}]({{ page.poster }})
-{% else %}
-{{ page.bands }}
-{% endif %}

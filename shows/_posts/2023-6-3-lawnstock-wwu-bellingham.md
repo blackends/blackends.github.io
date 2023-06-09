@@ -2,10 +2,6 @@
 layout: show
 location: Bellingham
 venue: Lawnstock, WWU
+poster: /assets/img/posters/2023-6-3-lawnstock-wwu-bellingham.jpg
 ---
 
-{% if page.poster %}
-![{{ page.date | date: "%m/%-d/%Y" }}, {{ page.location }}, {{ page.venue }}]({{ page.poster }})
-{% else %}
-{{ page.bands }}
-{% endif %}

@@ -9,9 +9,9 @@ const allShows = [
         human: "{{ post.date | date: '%B %-d, %Y' }}",
         machine: "{{ post.date | date: '%Y-%m-%d' }}"
       },
+      anchor: "{{ post.date | date: '%m%-d%Y' }}",
       poster: "{{ post.poster }}",
       bands: "{{ post.bands }}",
-      url: "{{ post.url }}",
       link: "{{ post.link }}",
       title: "{{ post.date | date: '%m/%-d/%Y' }}, {{ post.location }}, {{ post.venue }}"
     }{% unless forloop.last %},{% endunless %}
@@ -44,15 +44,22 @@ allShows.forEach(s => {
 const li = document.querySelector(".next-show");
 
 const h2 = document.createElement("h2");
-h2.textContent = `next show: `;
+h2.textContent = "next show: ";
 li.appendChild(h2);
 
 const a = document.createElement("a");
-a.href = nextShow.link ? nextShow.link : "/tour/";
+a.href = `/tour/#${nextShow.anchor}`;
 a.textContent = `${nextShow.title}`;
 h2.appendChild(a);
 
-if (nextShow.bands) {
+if (nextShow.link) {
+    const linka = document.createElement("a");
+    linka.href = nextShow.link;
+    linka.textContent = `🔗 ${ nextShow.bands ? nextShow.bands : "Event Link" }`;
+    const p  = document.createElement("p");
+    p.appendChild(linka);
+    li.appendChild(p);
+} else {
     const p  = document.createElement("p");
     p.textContent = nextShow.bands;
     li.appendChild(p);
@@ -64,6 +71,15 @@ if (nextShow.poster) {
     img.src = nextShow.poster;
     img.alt = nextShow.title;
     p.appendChild(img);
-    li.appendChild(p);
+
+    if (nextShow.link) {
+        const linka = document.createElement("a");
+        linka.href = nextShow.link;
+        linka.alt = `${ nextShow.title }`;
+        linka.appendChild(p);
+        li.appendChild(linka);
+    } else {
+        li.appendChild(p);
+    }
 }
 
