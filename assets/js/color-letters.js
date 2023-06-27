@@ -16,6 +16,8 @@ const anagrams = [
     'ben slackd',
     'blend sack',
     'bald necks',
+    'lends back',
+    'lacks bend',
     'lsd backne'
 ];
 const relativeLetterPos = {
