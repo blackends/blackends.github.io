@@ -4,7 +4,7 @@ layout: default
 permalink: /about/
 ---
 ```
-black ends is gunk pop
+✨ BLACK ENDS IS GUNK POP ✨
 
 nicolle swims / guitar / vocals
 
