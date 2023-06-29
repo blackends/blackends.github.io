@@ -13,7 +13,7 @@ const allShows = [
       poster: "{{ post.poster }}",
       bands: "{{ post.bands }}",
       link: "{{ post.link }}",
-      title: "{{ post.date | date: '%m/%-d/%Y' }}, {{ post.location }}, {{ post.venue }}"
+      title: "{{ post.date | date: '%B %-d, %Y' }} @ {{ post.venue }}, {{ post.location }}"
     }{% unless forloop.last %},{% endunless %}
   {% endfor %}
 ];

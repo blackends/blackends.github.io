@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<h2>{{ page.date | date: "%m/%-d/%Y" }}, {{ page.location }}, {{ page.venue }}</h2>
+<h2>{{ page.date | date: '%B %-d, %Y' }} @ {{ page.venue }}, {{ page.location }}</h2>
 {% if page.link %}
 {% if page.bands %}
 <a href="{{ page.link }}" target="_blank"><p>🔗 {{ page.bands }}</p></a>
