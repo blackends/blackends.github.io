@@ -14,7 +14,7 @@ ORGANIZER:mailto:blackendsmusic@gmail.com
 SUMMARY:black ends @ {{ show.venue }}, {{ show.location }}
 DTSTART:{{ show.date | date: "%Y%m%d" }}
 DTSTAMP:{{ show.date | date: "%Y%m%dT%H%M%S" }}
-LOCATION:{{ show.location }}
+LOCATION:{{ show.venue }}, {{ show.location }}
 DESCRIPTION:black ends show at {{ show.venue }} in {{ show.location }}!{% if show.bands %}
  \nbands: {{ show.bands }} {% endif %}{% if show.link %}
  \nlink: {{ show.link }} {% endif %}
