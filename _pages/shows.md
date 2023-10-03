@@ -3,6 +3,7 @@ layout: default
 title: tour dates
 permalink: /tour/
 ---
+<p class="help"><a href="/poster-collage/">🪧</a>&nbsp;</p>
 <p class="help"><a href="/map/">🌍</a></p>
 <p class="help"><a href="/calendar/">📅</a>&nbsp;</p>
 <h2>tour dates</h2>

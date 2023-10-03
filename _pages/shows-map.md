@@ -3,6 +3,7 @@ layout: default
 title: tour map
 permalink: /map/
 ---
+<p class="help" style="margin-bottom: 0;"><a href="/tour/">⬅️ back</a>&nbsp;</p>
 ## where have we played?
 <!-- Leaflet's CSS -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
