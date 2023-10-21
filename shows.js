@@ -26,7 +26,12 @@ function getComparisonDate(show) {
 }
 
 const now = new Date();
+now.setHours(0);
+now.setMinutes(0);
+now.setSeconds(0);
 let nextShow = allShows[0];
+
+console.log(now)
 
 // find next show
 allShows.forEach(s => {
