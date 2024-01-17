@@ -8,7 +8,11 @@ title: black ends
 {% for post in site.tags.pinned %}
 <li><hr /></li>
 <li>
+{% if post.link %}
+<a target="_blank" href="{{ post.link }}"><h2>{{ post.title }}</h2></a>
+{% else %}
 <h2>{{ post.title }}</h2>
+{% endif %}
 {% if post.video %}
 <video controls src="{{ post.video }}"></video>
 {% endif %}

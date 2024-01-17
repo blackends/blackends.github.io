@@ -31,8 +31,6 @@ now.setMinutes(0);
 now.setSeconds(0);
 let nextShow = allShows[0];
 
-console.log(now)
-
 // find next show
 allShows.forEach(s => {
     const thisShowDate = getComparisonDate(s),
@@ -75,7 +73,7 @@ if (nextShow.poster) {
     const img = document.createElement("img");
     img.src = nextShow.poster;
     img.alt = nextShow.title;
-    p.appendChild(img);
+    // p.appendChild(img);
 
     if (nextShow.link) {
         const linka = document.createElement("a");
