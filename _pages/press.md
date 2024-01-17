@@ -3,8 +3,7 @@ layout: default
 title: press
 permalink: /press/
 ---
-## press
-> ## [EPK](https://drive.google.com/drive/folders/1x2ruIM24ParliPgWUqqJePIfYAbf7wuA?usp=sharing){:target="_blank"}
+## [📁 Press Kit](https://drive.google.com/drive/folders/1x2ruIM24ParliPgWUqqJePIfYAbf7wuA?usp=sharing){:target="_blank"}
 
 ---
 ## articles
