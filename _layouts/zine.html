@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=jw7xzYlPwB">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=jw7xzYlPwB">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=jw7xzYlPwB">
+    <link rel="manifest" href="/site.webmanifest?v=jw7xzYlPwB">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg?v=jw7xzYlPwB" color="#5bbad5">
+    <link rel="shortcut icon" href="/favicon.ico?v=jw7xzYlPwB">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png?v=jw7xzYlPwB">
+    <meta name="theme-color" content="#000000">
+
+{% seo %}
+    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    {% include head-custom.html %}
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <!-- <a href="#" class="menu" onclick="toggleMenu()"><img src="/assets/img/icons/icons8-menu-squared-50.png" /></a> -->
+
+        <a id="logo-link" href="{{ "/" | absolute_url }}" title="black ends">{% include logo.svg %}</a>
+        <script src="{{ "/assets/js/color-letters.js" | relative_url }}"></script>
+
+        <!-- <nav> -->
+        <!--     <p class="view"><a href="/tour">tour dates</a></p> -->
+        <!--     <p class="view"><a href="/music">music</a></p> -->
+        <!--     <p class="view"><a href="/videos">videos</a></p> -->
+        <!--     <p class="view"><a href="/news">news</a></p> -->
+        <!--     <p class="view"><a href="/press">press</a></p> -->
+        <!--     <p class="view"><a href="/about">about</a></p> -->
+        <!--     <p class="view"><a href="mailto:blackendsmusic@gmail.com" target="_blank" rel="noopener noreferrer">contact</a></p> -->
+        <!-- </nav> -->
+        <!-- <script> -->
+        <!--     const nav = document.querySelector("nav"); -->
+        <!--     let menu_open = false; -->
+        <!--     function toggleMenu() { -->
+        <!--         // debounce the close (do not need to debounce open) -->
+        <!--         if (!(nav.classList.contains("fade-out") && nav.classList.contains("show"))) { -->
+        <!--             menu_open = !menu_open; -->
+        <!--             if (menu_open) { -->
+        <!--                 nav.classList.add("show"); -->
+        <!--                 setTimeout(() => { -->
+        <!--                     nav.classList.add("fade-in"); -->
+        <!--                 }, 0); -->
+        <!--             } else { -->
+        <!--                 nav.classList.add("fade-out"); -->
+        <!--                 setTimeout(() => { -->
+        <!--                     nav.classList.remove("fade-out"); -->
+        <!--                     nav.classList.remove("fade-in"); -->
+        <!--                     nav.classList.remove("show"); -->
+        <!--                 }, 700); -->
+        <!--             } -->
+        <!--         } -->
+        <!--     } -->
+        <!-- </script> -->
+
+        <!-- <div class="socials"> -->
+        <!--     {% for social in site.data.socials %} -->
+        <!--     <a href="{{ social.href }}" title="{{ social.title }}" target="_blank" rel="noopener noreferrer"> -->
+        <!--         <img src="{{ social.img }}" alt="{{ social.title }}" /> -->
+        <!--     </a> -->
+        <!--     {% endfor %} -->
+        <!-- </div> -->
+
+      </header>
+      <section>
+
+      {{ content }}
+
+      </section>
+      <!-- <footer> -->
+      <!--   <div class="socials socials-mobile"> -->
+      <!--       {% for social in site.data.socials %} -->
+      <!--       <a href="{{ social.href }}" title="{{ social.title }}" target="_blank" rel="noopener noreferrer"> -->
+      <!--           <img src="{{ social.img }}" alt="{{ social.title }}" /> -->
+      <!--       </a> -->
+      <!--       {% endfor %} -->
+      <!--   </div> -->
+      <!-- </footer> -->
+    </div>
+    <style>
+  #black-ends-logo {
+      padding-left: 0;
+  }
+
+  div.wrapper {
+    width:auto;
+    margin:0;
+  }
+
+  header, section, footer {
+    float:none;
+    position:static;
+    width:auto;
+  }
+
+  section {
+    border:1px solid #e5e5e5;
+    border-width:1px 0;
+    padding: 20px 0 0 0;
+    margin:0 0 20px;
+  }
+
+  header a small {
+    display:inline;
+  }
+
+  header ul {
+    position:absolute;
+    right:50px;
+    top:52px;
+  }
+
+  p.view {
+    display: inline-block;
+    margin-right: 19px;
+  }
+
+  .socials {
+      display: none;
+  }
+  .socials.socials-mobile {
+      display: flex;
+  }
+
+    </style>
+    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+  </body>
+</html>
+
