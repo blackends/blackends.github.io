@@ -7,6 +7,6 @@ title: Get Black Ends to Europe April 2023!
 
 ![nicolle-billie-ben](/assets/img/nicolle-billie-ben.jpg)
 
-<div class="gfm-embed" data-url="https://www.gofundme.com/f/get-black-ends-to-europe-2023-different-link/widget/medium/"></div><script defer src="https://www.gofundme.com/static/js/embed.js"></script>
+Campaign ended, thank you so much everyone
 
 ![eu-tour-poster](/assets/img/posters/eu-tour-poster.png)
