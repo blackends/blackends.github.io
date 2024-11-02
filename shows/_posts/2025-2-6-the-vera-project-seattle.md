@@ -1,6 +1,6 @@
 ---
 layout: show
 location: Seattle
-venue: TBD
+venue: The Vera Project
 bands: Universe, Dark Chisme, Naked Giants
 ---
