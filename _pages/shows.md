@@ -12,26 +12,26 @@ permalink: /tour/
 <li class="show">
 <a class="anchor" id="{{ show.date | date: "%m%-d%Y" }}" name="{{ show.date | date: "%m%-d%Y" }}" href="#{{ show.date | date: "%m%-d%Y" }}">#</a>
 <h3><a href="{{ show.url }}"><span class="date">{{ show.date | date: '%B %-d, %Y' }}</span> @ <span class="location">{{ show.venue }}</span>, {{ show.location }}</a></h3>
-{% if show.link %}
-{% if show.bands %}
+{% unless show.link == "" or show.link == null %}
+{% unless show.bands == "" or show.bands == null %}
 <a href="{{ show.link }}" target="_blank"><p>🔗 {{ show.bands }}</p></a>
 {% else %}
 <a href="{{ show.link }}" target="_blank"><p>🔗 Event Link</p></a>
-{% endif %}
+{% endunless %}
 {% else %}
-{% if show.bands %}
+{% unless show.bands == "" or show.bands == null %}
 <p>{{ show.bands }}</p>
-{% endif %}
-{% endif %}
-{% if show.poster %}
-{% if show.link %}
+{% endunless %}
+{% endunless %}
+{% unless show.poster == "" or show.poster == null %}
+{% unless show.link == "" or show.link == null %}
 <a href="{{ show.link }}" target="_blank">
-{% endif %}
+{% endunless %}
 <img src="{{ show.poster }}" alt="{{ show.date | date: "%m/%-d/%Y" }}, {{ show.location }}, {{ show.venue }}">
-{% if show.link %}
+{% unless show.link == "" or show.link == null %}
 </a>
-{% endif %}
-{% endif %}
+{% endunless %}
+{% endunless %}
 </li>
 {% endfor %}
 </ul>

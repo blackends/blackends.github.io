@@ -8,17 +8,17 @@ title: black ends
 {% for post in site.tags.pinned %}
 <li><hr /></li>
 <li>
-{% if post.link %}
+{% unless post.link == "" or post.link == null %}
 <a target="_blank" href="{{ post.link }}"><h2>{{ post.title }}</h2></a>
 {% else %}
 <h2>{{ post.title }}</h2>
-{% endif %}
-{% if post.video %}
+{% endunless %}
+{% unless post.video == "" or post.video == null %}
 <video controls src="{{ post.video }}"></video>
-{% endif %}
-{% if post.youtube %}
+{% endunless %}
+{% unless post.youtube == "" or post.youtube == null %}
 <style>.codegena{position:relative;width:100%;height:0;padding-bottom:56.27198%;margin-bottom:20px}.codegena iframe{position:absolute;top:0;left:0;width:100%;height:100%;}</style><div class="codegena"><iframe width='500' height='294' src="https://www.youtube.com/embed/{{ post.youtube }}?&theme=dark&autohide=2&modestbranding=1&rel=0&iv_load_policy=3" frameborder="0"></iframe></div>
-{% endif %}
+{% endunless %}
 {{ post.content }}
 <p><small>{{ post.date | date: "%B %-d, %Y" }}</small></p>
 </li>

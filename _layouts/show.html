@@ -2,31 +2,31 @@
 layout: default
 ---
 <h2>{{ page.date | date: '%B %-d, %Y' }} @ {{ page.venue }}, {{ page.location }}</h2>
-{% if page.link %}
-{% if page.bands %}
+{% unless page.link == "" or page.link == null %}
+{% unless page.bands == "" or page.bands == null %}
 <a href="{{ page.link }}" target="_blank"><p>🔗 {{ page.bands }}</p></a>
 {% else %}
 <a href="{{ page.link }}" target="_blank"><p>🔗 Event Link</p></a>
-{% endif %}
+{% endunless %}
 {% else %}
-{% if page.bands %}
+{% unless page.bands == "" or page.bands == null %}
 <p>{{ page.bands }}</p>
-{% endif %}
-{% endif %}
-{% if page.poster %}
-{% if page.link %}
+{% endunless %}
+{% endunless %}
+{% unless page.poster == "" or page.poster == null %}
+{% unless page.link == "" or page.link == null %}
 <a href="{{ page.link }}" target="_blank">
-{% endif %}
+{% endunless %}
 <img src="{{ page.poster }}" alt="{{ page.date | date: "%m/%-d/%Y" }}, {{ page.location }}, {{ page.venue }}">
-{% endif %}
-{% if page.link %}
+{% endunless %}
+{% unless page.link == "" or page.link == null %}
 </a>
-{% endif %}
-{% if page.video %}
+{% endunless %}
+{% unless page.video == "" or page.video == null %}
 <video controls src="{{ page.video }}"></video>
-{% endif %}
-{% if page.youtube %}
+{% endunless %}
+{% unless page.youtube == "" or page.youtube == null %}
 <style>.codegena{position:relative;width:100%;height:0;padding-bottom:56.27198%;margin-bottom:20px}.codegena iframe{position:absolute;top:0;left:0;width:100%;height:100%;}</style><div class="codegena"><iframe width='500' height='294' src="https://www.youtube.com/embed/{{ page.youtube }}?&theme=dark&autohide=2&modestbranding=1&rel=0&iv_load_policy=3" frameborder="0"></iframe></div>
-{% endif %}
+{% endunless %}
 
 {{ content }}

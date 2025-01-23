@@ -1,0 +1,22 @@
+{
+  "name": "blackends.github.io",
+  "version": "1.0.0",
+  "description": "[gunkpop.com](https://gunkpop.com)",
+  "main": "generate-show-pages.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blackends/blackends.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blackends/blackends.github.io/issues"
+  },
+  "homepage": "https://github.com/blackends/blackends.github.io#readme",
+  "dependencies": {
+    "googleapis": "^144.0.0"
+  }
+}

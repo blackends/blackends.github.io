@@ -1,2 +1,4 @@
 _site
 .bundle
+zeta-structure-*.json
+node_modules
