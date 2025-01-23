@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Psychotic Spew available for preorder!
-tags: pinned
 ---
 
 [![Psychotic Spew](/assets/img/ps-art.jpg)](https://blackends.bandcamp.com/album/psychotic-spew-2)
