@@ -2,9 +2,8 @@ const { google } = require("googleapis");
 const fs = require("fs");
 const path = require("path");
 
-// Load service account credentials
-const keyFilePath = "./zeta-structure-244003-b0439c023056.json"; // Replace with your JSON key file path
-const credentials = require(keyFilePath);
+// Load service account credentials via JSON key file path
+const credentials = require("./zeta-structure-244003-b0439c023056.json");
 
 // Authenticate with Google
 const auth = new google.auth.GoogleAuth({
@@ -55,6 +54,17 @@ ${event.notes || ""}
   return files;
 }
 
+function generateLatLonFile(latlonData) {
+    const latlonObj = (() => {
+        let obj = {};
+        latlonData.forEach(ll => {
+            obj[ll[0]] = { lat: ll[1], lon: ll[2] };
+        });
+        return obj;
+    })();
+    return { "latlons.js": "const latlons = " + JSON.stringify(latlonObj, null, 4) };
+}
+
 function generateJekyllFilename(date, title) {
   const formattedDate = formatDateForJekyllFilename(date);
   const sanitizedTitle = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
@@ -62,7 +72,7 @@ function generateJekyllFilename(date, title) {
 }
 
 function formatDateForJekyllFilename(datestr) {
-  const date = new Date(datestr)
+  const date = new Date(datestr);
 
   // Format date as YYYY-MM-DD
   const year = date.getFullYear();
@@ -76,29 +86,39 @@ function writeFiles(files, outputDir) {
     Object.keys(files).forEach(filename => {
         const filePath = path.join(outputDir, filename);
         fs.writeFileSync(filePath, files[filename]);
-        console.log(`Markdown file created: ${filePath}`);
+        console.log(`File written: ${filePath}`);
     });
 }
 
-// Main function
-async function main() {
-  const spreadsheetId = "1F5RSBPbCGLBLyBr7SJDrZeAVtoj3brZlrsUAVbPPtk4"; // Replace with your spreadsheet ID
-  const range = "Shows!A1:G"; // Adjust range as needed
-  const outputDir = path.resolve("./shows/_posts");
-
+function makeDir(outputDir) {
   // Ensure output directory exists
   if (!fs.existsSync(outputDir)) {
     fs.mkdirSync(outputDir, { recursive: true });
   }
+}
 
-  try {
-    const data = await fetchSheetData(spreadsheetId, range);
-    const files = generateMarkdown(data);
-    writeFiles(files, outputDir);
-    console.log("All events processed.");
-  } catch (err) {
-    console.error("Error fetching or processing data:", err.message);
-  }
+// Main function
+async function main() {
+    const spreadsheetId = "1F5RSBPbCGLBLyBr7SJDrZeAVtoj3brZlrsUAVbPPtk4"; // Replace with your spreadsheet ID
+
+    const showDir = path.resolve("./shows/_posts");
+    const latlonDir = path.resolve("./assets/js");
+    makeDir(showDir);
+    makeDir(latlonDir);
+
+    try {
+        const showData = await fetchSheetData(spreadsheetId, "Shows!A1:G");
+        const showFiles = generateMarkdown(showData);
+        writeFiles(showFiles, showDir);
+
+        const latlonData = await fetchSheetData(spreadsheetId, "latlons!A2:C");
+        const latlonFiles = generateLatLonFile(latlonData);
+        writeFiles(latlonFiles, latlonDir);
+
+        console.log("All data processed.");
+    } catch (err) {
+        console.error("Error fetching or processing data:", err.message);
+    }
 }
 
 main();
