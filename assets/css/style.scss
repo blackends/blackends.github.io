@@ -2,38 +2,44 @@
 ---
 
 body {
-  background-color: #111;
-  padding:50px;
+  margin: 0;
+  background-color: #000;
+  background-image: url("../img/gallery/blacklodge.jpg");
+  background-size: cover;
+  background-position: top center; /* Keeps the subject centered */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
   font: 14px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #959595;
-  font-weight:400;
+  font-weight: 400;
 }
 
-.wrapper {
-  width: 860px;
-  margin: 0 auto;
-}
-
+$header-height: 75px;
 header {
-  width: 220px;
-  float: left;
-  position: fixed;
-  -webkit-font-smoothing:subpixel-antialiased;
+  display: grid;
+  grid-template-rows: $header-height;
+  grid-template-columns: 2fr 5fr;
+  width: 100%;
+  position: sticky;
+  background-color: #000;
 }
-
-section {
-  width: 500px;
-  float: right;
-  padding-bottom: 50px;
+header:after { /* fringe */
+  content: '';
+  background-color: #000;
+  position: absolute;
+  height: 24px;
+  width: 100%;
+  left: -40px;
+  bottom: -23px;
+  -webkit-clip-path: polygon(1% 0%, 4% 100%, 9% 0%, 13% 100%, 19% 1%, 21% 100%, 26% 5%, 30% 100%, 36% 2%, 43% 100%, 50% 1%, 52% 100%, 61% 0%, 69% 94%, 70% 0%, 76% 100%, 81% 0%, 84% 100%, 91% 0%, 97% 100%, 99% 3%);
 }
 
 // LOGO
 #black-ends-logo {
-    display: block;
-    padding: 0 0 10px 10px;
-    margin-bottom: 10px;
+    display: inline-block;
     height: 45px;
     width: 200px;
+    margin-left: 30px;
+    margin-top: 20px;
     overflow: visible;
 }
 #black-ends-logo .black-ends-logo-letter {
@@ -76,31 +82,37 @@ section {
 }
 // END LOGO
 
+nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  a {
+    display: inline;
+    margin: 0;
+    line-height: $header-height;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  a:hover {
+    background: white;
+    color: black;
+  }
+}
+
+section:first-of-type {
+  margin-top: 50px;
+}
+section {
+  width: 100%;
+}
+
 h1, h2, h3, h4, h5, h6 {
-  color: #222;
+  color: #FFF;
   margin:0 0 20px;
 }
 
 p, ul, ol, table, pre, dl {
   margin:0 0 20px;
-}
-
-p.view {
-    margin: 0;
-    height: 43px;
-    a {
-        padding-left: 10px;
-        padding-right: 10px;
-        line-height: 43px;
-        height: 43px;
-        margin: 0;
-        display: block;
-    }
-    
-    a:hover {
-        background: white;
-        color: black;
-    }
 }
 
 ul {
@@ -362,6 +374,7 @@ footer {
   height: auto !important;
 }
 
+/*
 @media print, screen and (max-width: 960px) {
 
   #black-ends-logo {
@@ -486,5 +499,4 @@ footer {
     color:#444;
   }
 }
-
-// @import "{{ site.theme }}";
+*/
