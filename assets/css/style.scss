@@ -131,6 +131,11 @@ section {
   padding-top: 50px;
   width: 100%;
   position: relative;
+  &:hover {
+    img {
+      transform: rotate(10deg);
+    }
+  }
 
   img {
     transform: rotate(-10deg);
@@ -139,9 +144,6 @@ section {
     width: 250px;
     margin-top: -140px;
     margin-right: 32px;
-    &:hover {
-      transform: rotate(10deg);
-    }
   }
   .mailing-list {
     width: 400px;
