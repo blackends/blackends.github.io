@@ -1,18 +1,34 @@
 ---
 ---
+@font-face {
+  font-family: Blacklisted;
+  src: url(../fonts/Blacklisted.ttf);
+}
+@font-face {
+  font-family: KeepOnTruckin;
+  src: url(../fonts/KeeponTruckin.ttf);
+}
+@font-face {
+  font-family: Marola;
+  src: url(../fonts/Marola.ttf);
+}
+@font-face {
+  font-family: Stereofidelic;
+  src: url(../fonts/Stereofidelic.otf);
+}
+@font-face {
+  font-family: TravelingTypewriter;
+  src: url(../fonts/TravelingTypewriter.ttf);
+}
 
 body {
   margin: 0;
   background-color: #000;
-  background-image: url("../img/gallery/blacklodge.jpg");
-  background-size: cover;
-  background-position: top center; /* Keeps the subject centered */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
   font: 14px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #959595;
   font-weight: 400;
 }
-
+$fringe-height: 30px;
 $header-height: 75px;
 header {
   display: grid;
@@ -26,11 +42,10 @@ header:after { /* fringe */
   content: '';
   background-color: #000;
   position: absolute;
-  height: 24px;
   width: 100%;
-  left: -40px;
-  bottom: -23px;
-  -webkit-clip-path: polygon(1% 0%, 4% 100%, 9% 0%, 13% 100%, 19% 1%, 21% 100%, 26% 5%, 30% 100%, 36% 2%, 43% 100%, 50% 1%, 52% 100%, 61% 0%, 69% 94%, 70% 0%, 76% 100%, 81% 0%, 84% 100%, 91% 0%, 97% 100%, 99% 3%);
+  height: $fringe-height;
+  bottom: -$fringe-height;
+  -webkit-clip-path: polygon(0% 0%, 4% 100%, 9% 0%, 13% 100%, 19% 0%, 21% 100%, 26% 5%, 30% 100%, 36% 0%, 43% 100%, 50% 0%, 52% 100%, 61% 0%, 69% 100%, 70% 0%, 76% 100%, 81% 0%, 84% 100%, 91% 0%, 97% 100%, 100% 0%);
 }
 
 // LOGO
@@ -83,30 +98,70 @@ header:after { /* fringe */
 // END LOGO
 
 nav {
+  font-family: TravelingTypewriter;
+  font-size: 20px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
   a {
+    transition: .05s ease;
     display: inline;
     margin: 0;
     line-height: $header-height;
     text-align: center;
     white-space: nowrap;
-  }
 
-  a:hover {
-    background: white;
-    color: black;
   }
 }
 
-section:first-of-type {
-  margin-top: 50px;
-}
 section {
   width: 100%;
 }
 
+.hero {
+  height: 80vh;
+  min-height: 500px;
+  background-size: cover;
+  background-position: top left; /* Keeps the subject centered */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+#zine {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  align-items: center;
+  padding-top: 50px;
+  width: 100%;
+  position: relative;
+
+  img {
+    transform: rotate(-10deg);
+    transition: 1s ease;
+    justify-self: end;
+    width: 250px;
+    margin-top: -140px;
+    margin-right: 32px;
+    &:hover {
+      transform: rotate(10deg);
+    }
+  }
+  .mailing-list {
+    width: 400px;
+    h2, p {
+      margin-left: 32px;
+    }
+  }
+}
+#zine::before { /* fringe */
+  content: '';
+  background-color: #000;
+  width: 100%;
+  position: absolute;
+  height: $fringe-height;
+  top: -$fringe-height;
+  -webkit-clip-path: polygon(0% 100%, 4% 0%, 9% 100%, 13% 0%, 19% 100%, 21% 0%, 26% 100%, 30% 0%, 36% 100%, 43% 0%, 50% 100%, 52% 0%, 61% 100%, 69% 0%, 70% 100%, 76% 0%, 81% 100%, 84% 0%, 91% 100%, 97% 00%, 100% 100%);
+}
+
 h1, h2, h3, h4, h5, h6 {
+  font-family: Blacklisted;
   color: #FFF;
   margin:0 0 20px;
 }
@@ -138,6 +193,7 @@ h1 {
 }
 
 h2 {
+  font-size:28px;
   color:#999;
 }
 
@@ -145,8 +201,12 @@ h3, h4, h5, h6 {
   color:#777;
 }
 
+p {
+  font-size: 16px;
+}
+
 a {
-  color:#267CB9;
+  color:#FFF;
   text-decoration: none;
 }
 
@@ -316,33 +376,32 @@ hr {
 }
 
 footer {
-  width:270px;
-  float:left;
+  width: 75px;
   position:fixed;
-  bottom:50px;
-  -webkit-font-smoothing:subpixel-antialiased;
+  bottom: 30px;
+  right: 0;
 }
 
 .socials {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 15px;
-
-    a {
-        width: 100%;
-        text-align: center;
-        height: 40px;
-        line-height: 40px;
-    }
+  margin-bottom: 10vh;
+  a {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    height: 45px;
+    line-height: 45px;
+  }
+  img {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+  }
+  a:hover {
     img {
-        display: inline-block;
-        vertical-align: middle;
-        width: 20px;
+      filter: drop-shadow(0 0 0.75rem white);
     }
-    a:hover {
-        filter: brightness(75%);
-        text-decoration: none;
-    }
+    text-decoration: none;
+  }
 }
 .socials.socials-mobile {
     display: none;

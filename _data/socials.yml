@@ -2,9 +2,9 @@
   href: 'https://www.instagram.com/black.ends'
   img: '/assets/img/icons/instagram.svg'
 
-- title: 'twitter'
-  href: 'https://twitter.com/EndsBlack'
-  img: '/assets/img/icons/twitter.svg'
+#- title: 'twitter'
+#  href: 'https://twitter.com/EndsBlack'
+#  img: '/assets/img/icons/twitter.svg'
 
 - title: 'bandcamp'
   href: 'https://blackends.bandcamp.com'

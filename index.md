@@ -1,10 +1,8 @@
 ---
 layout: default
-title: black ends
 ---
 
-## PSYCHOTIC SPEW TOUR
+<div class="hero">
+</div>
 
-## free online zine!!
-join our mailing list:
-<a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLScHB5eFjsmKZyPpt6wWQCnHiYxBi3zXmXtnR1F3Qr49t0tvug/viewform">JOIN</a>
+<script src="assets/js/hero.js"></script>

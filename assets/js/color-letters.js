@@ -1,14 +1,3 @@
-function randomInt(min, max) {
-    min = Math.ceil(min);
-    return Math.floor(Math.random() * (Math.floor(max) - min + 1)) + min;
-}
-
-const colors = [
-    'crimson',
-    'royalblue',
-    'gold',
-    'forestgreen'
-];
 const anagrams = [
     'bled snack',
     'elk nabs cd',
@@ -33,13 +22,6 @@ const relativeLetterPos = {
 };
 const letterWidth = 135,
     spaceWidth = 100;
-
-function randomColor(current='') {
-    do {
-        var color = colors[randomInt(0, colors.length - 1)];
-    } while (color == current)
-    return color;
-}
 
 const link = document.querySelector("#logo-link");
 const container = document.querySelector("#black-ends-logo");
