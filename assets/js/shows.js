@@ -1,11 +1,11 @@
 const now = new Date();
 
 // get all show list elements
-const shows = [...document.querySelectorAll('.show')];
+const shows = [...document.querySelectorAll('.event')];
 
 // a show is in the future, not in the past, until the next day
 function getComparisonDate(show) {
-    const date = new Date(show.querySelector('.date').innerText);
+    const date = new Date(show.dataset.date);
     date.setDate(date.getDate() + 1);
     return date;
 }

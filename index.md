@@ -2,7 +2,6 @@
 layout: default
 ---
 
-<div class="hero">
+<div class="hero hero-bg">
 </div>
 
-<script src="assets/js/hero.js"></script>

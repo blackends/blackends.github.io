@@ -3,15 +3,27 @@ layout: default
 title: tour dates
 permalink: /tour/
 ---
+<!--
 <p class="help"><a href="/poster-collage/">🪧</a>&nbsp;</p>
 <p class="help"><a href="/map/">🌍</a></p>
 <p class="help"><a href="/calendar/">📅</a>&nbsp;</p>
-<h2>tour dates</h2>
+-->
+{% assign currentyear = "now" | date: "%Y" %}
+
 <ul class="future-container">
 {% for show in site.categories.shows %}
-<li class="show">
-<a class="anchor" id="{{ show.date | date: "%m%-d%Y" }}" name="{{ show.date | date: "%m%-d%Y" }}" href="#{{ show.date | date: "%m%-d%Y" }}">#</a>
-<h3><a href="{{ show.url }}"><span class="date">{{ show.date | date: '%B %-d, %Y' }}</span> @ <span class="location">{{ show.venue }}</span>, {{ show.location }}</a></h3>
+<li class="event" data-date="{{ show.date | date: '%B %-d, %Y' }}">
+<div class="date">
+<p class="day">{{ show.date | date: '%-d' }}</p>
+{% assign showyear = show.date | date: "%Y" %}
+{% if showyear != currentyear %}
+<p class="month">{{ show.date | date: '%b %Y' }}</p>
+{% else if %}
+<p class="month">{{ show.date | date: '%b' }}</p>
+{% endif %}
+</div>
+<div class="details">
+<h3><a class="anchor" id="{{ show.date | date: "%m%-d%Y" }}" name="{{ show.date | date: "%m%-d%Y" }}" href="#{{ show.date | date: "%m%-d%Y" }}">@</a> <a href="{{ show.url }}">{{ show.venue }}</a></h3>
 {% unless show.link == "" or show.link == null %}
 {% unless show.bands == "" or show.bands == null %}
 <a href="{{ show.link }}" target="_blank"><p>🔗 {{ show.bands }}</p></a>
@@ -23,23 +35,27 @@ permalink: /tour/
 <p>{{ show.bands }}</p>
 {% endunless %}
 {% endunless %}
+<p>{{ show.location }}</p>
+</div>
 {% unless show.poster == "" or show.poster == null %}
+<div class="poster">
+<img src="{{ show.poster }}" alt="{{ show.date | date: "%m/%-d/%Y" }}, {{ show.location }}, {{ show.venue }}" />
+</div>
+{% endunless %}
+<!--
 {% unless show.link == "" or show.link == null %}
 <a href="{{ show.link }}" target="_blank">
 {% endunless %}
-<img src="{{ show.poster }}" alt="{{ show.date | date: "%m/%-d/%Y" }}, {{ show.location }}, {{ show.venue }}">
 {% unless show.link == "" or show.link == null %}
 </a>
 {% endunless %}
-{% endunless %}
+-->
 </li>
 {% endfor %}
 </ul>
-<hr />
 <ul class="past-container">
 <li><h2>past</h2></li>
 </ul>
-<p class="help"><a href="/2022/12/06/show-project">contribute to this list</a></p>
 <p>total shows: <b>{{ site.categories.shows | size }}</b>!</p>
 
 <!-- sorts the shows based on date -->

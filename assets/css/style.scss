@@ -20,6 +20,10 @@
   font-family: TravelingTypewriter;
   src: url(../fonts/TravelingTypewriter.ttf);
 }
+@font-face {
+  font-family: QuakerShaker;
+  src: url(../fonts/QuakerShaker.ttf);
+}
 
 body {
   margin: 0;
@@ -103,7 +107,7 @@ nav {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
   a {
-    transition: .05s ease;
+    transition: .2s ease;
     display: inline;
     margin: 0;
     line-height: $header-height;
@@ -159,31 +163,25 @@ section {
   position: absolute;
   height: $fringe-height;
   top: -$fringe-height;
-  -webkit-clip-path: polygon(0% 100%, 4% 0%, 9% 100%, 13% 0%, 19% 100%, 21% 0%, 26% 100%, 30% 0%, 36% 100%, 43% 0%, 50% 100%, 52% 0%, 61% 100%, 69% 0%, 70% 100%, 76% 0%, 81% 100%, 84% 0%, 91% 100%, 97% 00%, 100% 100%);
+  -webkit-clip-path: polygon(0% 100%, 3% 0%, 9% 100%, 16% 0%, 19% 100%, 24% 0%, 30% 100%, 34% 0%, 39% 100%, 48% 0%, 50% 100%, 58% 0%, 64% 100%, 70% 0%, 74% 100%, 79% 0%, 81% 100%, 88% 0%, 91% 100%, 96% 00%, 100% 100%);
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: Blacklisted;
   color: #FFF;
-  margin:0 0 20px;
+  margin: 0 0 10px;
 }
 
-p, ul, ol, table, pre, dl {
-  margin:0 0 20px;
+p, ol, table, pre, dl {
+  margin: 0;
 }
 
 ul {
-    padding: 0;
-    list-style-type: none;
-    li {
-        margin-bottom: 30px;
-    }
-    li.show span.location {
-        color:#489EDB;
-    }
+  padding: 0;
+  list-style-type: none;
 }
 ul.alternate-text-align li:nth-child(even) {
-    text-align: right;
+  text-align: right;
 }
 
 h1, h2, h3 {
@@ -228,12 +226,6 @@ a:hover small {
   color:#777;
 }
 
-.anchor {
-    float: left;
-    margin-left: -20px;
-    font-size: 16px;
-    margin-top: -3px;
-}
 
 p.help {
     float: right;
@@ -378,25 +370,23 @@ hr {
 }
 
 footer {
-  width: 75px;
   position:fixed;
-  bottom: 30px;
+  bottom: 20px;
   right: 0;
+  margin-right: 10px
 }
 
 .socials {
-  margin-bottom: 10vh;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 25px;
   a {
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-    height: 45px;
-    line-height: 45px;
+    display: block;
+    width: 25px;
+    padding: 10px;
   }
   img {
-    display: inline-block;
+    transition: 0.5s ease;
     vertical-align: middle;
-    width: 20px;
   }
   a:hover {
     img {
@@ -414,6 +404,40 @@ footer {
     height: 55px;
 }
 
+$event-height: 100px;
+.event {
+  height: $event-height;
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  border-bottom: dashed 1px #e5e5e5;
+
+  .poster {
+      overflow: hidden;
+  }
+
+  h3 {
+    font-family: TravelingTypewriter;
+  }
+
+  .date {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-transform: uppercase;
+    font-family: TravelingTypewriter;
+    color: #FFF;
+    .day {
+      line-height: 1;
+      font-size: 28px;
+    }
+    .month {
+      font-size: 19px;
+    }
+  }
+}
+
 #collage {
   /* Prevent vertical gaps */
   line-height: 0;
@@ -427,12 +451,35 @@ footer {
   border: 0;
   padding: 0;
   margin: 0;
+  background-image:  url("../img/paper.jpg");
 }
 
 #collage img {
   /* Just in case there are inline attributes */
   width: 100% !important;
   height: auto !important;
+}
+
+.releases {
+  background-image:  url("../img/paper.jpg");
+  background-size: cover;
+  background-position: top left; /* Keeps the subject centered */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  margin: 0;
+  background-color: white;
+  padding: 60px 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+
+  iframe {
+    margin-bottom: 10px;
+    box-shadow: 5px 5px 2px 0px rgba(0,0,0,0.75);
+  }
+
+  p {
+    font-family: TravelingTypewriter;
+  }
 }
 
 /*
