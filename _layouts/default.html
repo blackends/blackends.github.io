@@ -57,6 +57,20 @@
       </footer>
 
       <script src="/assets/js/hero.js"></script>
+      <script>
+          document.addEventListener("DOMContentLoaded", function () {
+              const nav = [
+                  {% for nl in site.data.nav %}
+                  "{{ nl.title }}",
+                  {% endfor %}
+              ];
+              nav.forEach(nl => {
+                  if (window.location.pathname.includes(nl)) {
+                      document.querySelector("nav ")
+                  }
+              });
+          });
+      </script>
   </body>
 </html>
 

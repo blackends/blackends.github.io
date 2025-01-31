@@ -41,6 +41,11 @@ header {
   width: 100%;
   position: sticky;
   background-color: #000;
+  z-index: 100;
+
+  &:hover a {
+    filter: none;
+  }
 }
 header:after { /* fringe */
   content: '';
@@ -106,6 +111,11 @@ nav {
   font-size: 20px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+
+  &:hover a {
+    filter: none;
+  }
+
   a {
     transition: .2s ease;
     display: inline;
@@ -113,7 +123,7 @@ nav {
     line-height: $header-height;
     text-align: center;
     white-space: nowrap;
-
+    color: #959595;
   }
 }
 
@@ -197,6 +207,10 @@ h2 {
   color:#999;
 }
 
+h3 {
+  font-size: 20px;
+}
+
 h3, h4, h5, h6 {
   color:#777;
 }
@@ -211,21 +225,10 @@ a {
 }
 
 a:hover, a:focus {
-  color:#069;
+  filter: drop-shadow(0 0 0.1rem white);
+  color: white;
   text-decoration: underline;
 }
-
-a small {
-  font-size:11px;
-  color:#777;
-  margin-top:-0.3em;
-  display:block;
-}
-
-a:hover small {
-  color:#777;
-}
-
 
 p.help {
     float: right;
@@ -330,11 +333,6 @@ ul.downloads {
   height:34px;
 }
 
-.downloads a:hover, .downloads a:focus {
-  color:#675C5C;
-  font-weight:bold;
-}
-
 .downloads ul a:active {
   background-color:#f0f0f0;
 }
@@ -380,6 +378,8 @@ footer {
   background-color: rgba(0,0,0,0.5);
   border-radius: 25px;
   a {
+    filter: none;
+
     display: block;
     width: 25px;
     padding: 10px;
@@ -404,19 +404,54 @@ footer {
     height: 55px;
 }
 
+.future-container, .past-container {
+    padding: 0 10%;
+    margin: 0;
+}
+
 $event-height: 100px;
 .event {
+  &:first-of-type {
+    padding-top: 30px
+  }
+
   height: $event-height;
   display: grid;
-  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-columns: 1fr 5fr;
   border-bottom: dashed 1px #e5e5e5;
+
+  background-size: cover;
+  background-position: center center;
+  background-color: rgba(0,0,0,0.7);
+  background-blend-mode: multiply;
+  
+  filter: drop-shadow(0 0 0.5rem black);
 
   .poster {
       overflow: hidden;
   }
 
+  .details {
+    a {
+      display: flex;
+      height: $event-height;
+      flex-direction: column;
+      justify-content: center; /* Centers vertically */
+      &:hover p, &:focus p {
+        color: white!important;
+      }
+    }
+    p {
+      filter: drop-shadow(0 0 0.6rem black);
+      color: #959595;
+    }
+  }
+
   h3 {
+    filter: drop-shadow(0 0 0.6rem black);
     font-family: TravelingTypewriter;
+    margin: 0;
+    color: #FFF;
   }
 
   .date {
@@ -428,12 +463,16 @@ $event-height: 100px;
     text-transform: uppercase;
     font-family: TravelingTypewriter;
     color: #FFF;
+    text-align: center;
+
     .day {
       line-height: 1;
       font-size: 28px;
+      filter: drop-shadow(0 0 0.6rem black);
     }
     .month {
       font-size: 19px;
+      filter: drop-shadow(0 0 0.6rem black);
     }
   }
 }

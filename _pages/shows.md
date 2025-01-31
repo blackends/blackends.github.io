@@ -12,8 +12,15 @@ permalink: /tour/
 
 <ul class="future-container">
 {% for show in site.categories.shows %}
-<li class="event" data-date="{{ show.date | date: '%B %-d, %Y' }}">
+
+{% assign posterstyle = "" %}
+{% unless show.poster == "" or show.poster == null %}
+{% assign posterstyle = "background-image: url('" | append: show.poster | append: "')" %}
+{% endunless %}
+
+<li class="event dark-overlay" data-date="{{ show.date | date: '%B %-d, %Y' }}" style="{{ posterstyle }}">
 <div class="date">
+<a class="anchor" id="{{ show.date | date: "%m%-d%Y" }}" name="{{ show.date | date: "%m%-d%Y" }}" href="#{{ show.date | date: "%m%-d%Y" }}">
 <p class="day">{{ show.date | date: '%-d' }}</p>
 {% assign showyear = show.date | date: "%Y" %}
 {% if showyear != currentyear %}
@@ -21,27 +28,25 @@ permalink: /tour/
 {% else if %}
 <p class="month">{{ show.date | date: '%b' }}</p>
 {% endif %}
+</a>
 </div>
 <div class="details">
-<h3><a class="anchor" id="{{ show.date | date: "%m%-d%Y" }}" name="{{ show.date | date: "%m%-d%Y" }}" href="#{{ show.date | date: "%m%-d%Y" }}">@</a> <a href="{{ show.url }}">{{ show.venue }}</a></h3>
+{% assign href = "" %}
 {% unless show.link == "" or show.link == null %}
-{% unless show.bands == "" or show.bands == null %}
-<a href="{{ show.link }}" target="_blank"><p>🔗 {{ show.bands }}</p></a>
+  {% assign href = show.link %}
 {% else %}
-<a href="{{ show.link }}" target="_blank"><p>🔗 Event Link</p></a>
+  {% assign href = show.url %}
 {% endunless %}
-{% else %}
+
+<a href="{{ href }}" target="_blank">
+<h3>{{ show.location }}</h3>
+<p>{{ show.venue }}</p>
 {% unless show.bands == "" or show.bands == null %}
 <p>{{ show.bands }}</p>
 {% endunless %}
-{% endunless %}
-<p>{{ show.location }}</p>
+</a>
+
 </div>
-{% unless show.poster == "" or show.poster == null %}
-<div class="poster">
-<img src="{{ show.poster }}" alt="{{ show.date | date: "%m/%-d/%Y" }}, {{ show.location }}, {{ show.venue }}" />
-</div>
-{% endunless %}
 <!--
 {% unless show.link == "" or show.link == null %}
 <a href="{{ show.link }}" target="_blank">

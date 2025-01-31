@@ -23,3 +23,9 @@ pastShows.forEach(show => pastContainer.appendChild(show));
 const futureContainer = document.querySelector('.future-container');
 futureShows.forEach(show => futureContainer.appendChild(show));
 
+let prevBgImage = "";
+shows.forEach(show => {
+    if (!show.style.backgroundImage) {
+        prevBgImage = show.style.backgroundColor = randomColorRGBA(0.2, prevBgImage);
+    }
+});
