@@ -10,6 +10,8 @@ permalink: /tour/
 -->
 {% assign currentyear = "now" | date: "%Y" %}
 
+<h2 class="upcoming-shows">Upcoming shows</h2>
+
 <ul class="future-container">
 {% for show in site.categories.shows %}
 
@@ -47,21 +49,12 @@ permalink: /tour/
 </a>
 
 </div>
-<!--
-{% unless show.link == "" or show.link == null %}
-<a href="{{ show.link }}" target="_blank">
-{% endunless %}
-{% unless show.link == "" or show.link == null %}
-</a>
-{% endunless %}
--->
 </li>
 {% endfor %}
 </ul>
+<h2 class="past-shows">Past shows ▼</h2>
 <ul class="past-container">
-<li><h2>past</h2></li>
 </ul>
-<p>total shows: <b>{{ site.categories.shows | size }}</b>!</p>
 
 <!-- sorts the shows based on date -->
 <script src="/assets/js/shows.js" type="text/javascript"></script>

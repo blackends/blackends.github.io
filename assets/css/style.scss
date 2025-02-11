@@ -139,6 +139,10 @@ section {
   background-repeat: no-repeat; /* Prevents the image from repeating */
 }
 #zine {
+  h2 {
+      font-family: Blacklisted;
+  }
+
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   align-items: center;
@@ -177,7 +181,6 @@ section {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Blacklisted;
   color: #FFF;
   margin: 0 0 10px;
 }
@@ -404,6 +407,29 @@ footer {
     height: 55px;
 }
 
+
+h2.upcoming-shows, h2.past-shows {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: TravelingTypewriter;
+  text-align: center;
+  color: white;
+}
+
+h2.past-shows {
+  &:hover {
+    filter: drop-shadow(0 0 0.1rem white);
+    cursor: pointer
+  }
+}
+
+.past-container {
+  display: none;
+  &.open {
+    display: block;
+  }
+}
+
 .future-container, .past-container {
     padding: 0 10%;
     margin: 0;
@@ -411,10 +437,6 @@ footer {
 
 $event-height: 100px;
 .event {
-  &:first-of-type {
-    padding-top: 30px
-  }
-
   height: $event-height;
   display: grid;
   grid-template-columns: 1fr 5fr;
@@ -500,10 +522,10 @@ $event-height: 100px;
 }
 
 .releases {
-  background-image:  url("../img/paper.jpg");
+  background-image: url("../img/paper-dark2.jpg");
   background-size: cover;
   background-position: top left; /* Keeps the subject centered */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
+
   margin: 0;
   background-color: white;
   padding: 60px 40px;
@@ -513,11 +535,12 @@ $event-height: 100px;
 
   iframe {
     margin-bottom: 10px;
-    box-shadow: 5px 5px 2px 0px rgba(0,0,0,0.75);
+    box-shadow: 4px 4px 10px 0px rgba(0,0,0,0.75);
   }
 
-  p {
+  h3, p {
     font-family: TravelingTypewriter;
+    color: white;
   }
 }
 

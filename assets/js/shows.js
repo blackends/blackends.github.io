@@ -29,3 +29,15 @@ shows.forEach(show => {
         prevBgImage = show.style.backgroundColor = randomColorRGBA(0.2, prevBgImage);
     }
 });
+
+const pastTitle = document.querySelector(".past-shows");
+pastTitle.addEventListener("click", e => {
+    pastContainer.classList.toggle("open");
+
+    // Update arrow indicator
+    if (pastContainer.classList.contains("open")) {
+        pastTitle.textContent = pastTitle.textContent.replace("▼", "▲");
+    } else {
+        pastTitle.textContent = pastTitle.textContent.replace("▲", "▼");
+    }
+});
