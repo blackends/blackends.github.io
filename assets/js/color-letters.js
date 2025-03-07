@@ -125,7 +125,7 @@ function checkMagic() {
             } else if (allColorsMatch()) {
                 applyMagic();
             }
-        }, 5000);
+        }, 1000);
     } else {
         removeMagic();
     }

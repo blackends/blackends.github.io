@@ -22,10 +22,9 @@
   </head>
   <body>
       <header>
-        <a href="#" class="menu" onclick="toggleMenu()"><img src="/assets/img/icons/icons8-menu-squared-50.png" /></a>
-
         <a id="logo-link" href="{{ "/" | absolute_url }}" title="black ends">{% include logo.svg %}</a>
         <script src="{{ "/assets/js/color-letters.js" | relative_url }}"></script>
+        <a href="#" class="menu" onclick="toggleMenu()"><img src="/assets/img/icons/icons8-menu-squared-50.png" /></a>
 
         <nav>
             {% for nl in site.data.nav %}
@@ -57,20 +56,6 @@
       </footer>
 
       <script src="/assets/js/hero.js"></script>
-      <script>
-          document.addEventListener("DOMContentLoaded", function () {
-              const nav = [
-                  {% for nl in site.data.nav %}
-                  "{{ nl.title }}",
-                  {% endfor %}
-              ];
-              nav.forEach(nl => {
-                  if (window.location.pathname.includes(nl)) {
-                      document.querySelector("nav ")
-                  }
-              });
-          });
-      </script>
   </body>
 </html>
 
