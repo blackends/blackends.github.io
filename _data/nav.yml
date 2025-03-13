@@ -4,14 +4,14 @@
 - title: 'tour'
   href: '/tour'
 
-- title: 'videos'
-  href: '/videos'
+#- title: 'videos'
+#  href: '/videos'
 
 #- title: 'news'
 #  href: '/news'
 
-- title: 'press'
-  href: '/press'
+#- title: 'press'
+#  href: '/press'
 
 - title: 'about'
   href: '/about'

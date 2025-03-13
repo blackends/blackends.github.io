@@ -157,7 +157,7 @@ section {
 
   img {
     transform: rotate(-10deg);
-    transition: 1s ease;
+    transition: transform 1s ease;
     justify-self: end;
     width: 250px;
     margin-top: -140px;
@@ -252,7 +252,7 @@ code, pre {
 }
 
 pre {
-  padding:8px 15px;
+  padding: 50px 15px;
   background: #f8f8f8;
   border-radius:5px;
   border:1px solid #e5e5e5;
@@ -400,6 +400,11 @@ footer {
 }
 .menu {
     display: none;
+
+    a {
+      float: right;
+      margin: 10px 10px 0 0;
+    }
 }
 
 h2.upcoming-shows, h2.past-shows {
@@ -547,6 +552,17 @@ $event-height: 100px;
       transition: height 0.7s, padding-bottom 0.7s;
       overflow: hidden;
 
+      position: fixed;
+      right: 0;
+      top: 50px;
+      z-index: 100;
+      border: 1px solid white;
+
+      a {
+        display: block;
+        padding: 0 20px;
+      }
+
       display: none;
       p.view {
           top: -300px;
@@ -562,8 +578,9 @@ $event-height: 100px;
       display: block;
   }
   nav.show.fade-in {
-      height: 301px;
+      height: unset;
       padding-bottom: 15px;
+      background: black;
 
       p.view {
           top: 0;
@@ -576,28 +593,21 @@ $event-height: 100px;
           top: -300px;
       }
   }
+
+}
+
+@media print, screen and (max-width: 720px) {
+  #zine {
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+    display: block;
+    padding-top: 0;
+  }
 }
 
 /*
-@media print, screen and (max-width: 720px) {
-  body {
-    word-wrap:break-word;
-  }
-
-  header {
-    padding:0;
-  }
-
-  header ul, header p.view {
-    position:static;
-  }
-
-
-  pre, code {
-    word-wrap:normal;
-  }
-}
-
 @media print, screen and (max-width: 480px) {
   body {
     padding:15px;
