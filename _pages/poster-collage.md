@@ -3,8 +3,6 @@ title: poster collage
 layout: default
 permalink: /poster-collage/
 ---
-<p class="help" style="margin-bottom: 0;"><a href="/tour/">⬅️ back</a>&nbsp;</p>
-## posters!
 <section id="collage">
 {% for show in site.categories.shows %}
 {% unless show.poster == "" or show.poster == null %}
@@ -14,3 +12,4 @@ permalink: /poster-collage/
 {% endunless %}
 {% endfor %}
 </section>
+

@@ -12,54 +12,40 @@
     <link rel="manifest" href="/site.webmanifest">
     <meta name="theme-color" content="#000000">
 
-{% seo %}
+    {% seo %}
+
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
-    {% include head-custom.html %}
+    <script src="/assets/js/utils.js"></script>
   </head>
   <body>
-    <div class="wrapper">
       <header>
-        <a href="#" class="menu" onclick="toggleMenu()"><img src="/assets/img/icons/icons8-menu-squared-50.png" /></a>
-
         <a id="logo-link" href="{{ "/" | absolute_url }}" title="black ends">{% include logo.svg %}</a>
         <script src="{{ "/assets/js/color-letters.js" | relative_url }}"></script>
+        <div class="menu"><a href="#" onclick="toggleMenu()"><img src="/assets/img/icons/icons8-menu-squared-50.png" /></a></div>
 
         <nav>
-            <p class="view"><a href="/music">music</a></p>
-            <p class="view"><a href="/tour">tour dates</a></p>
-            <p class="view"><a href="/videos">videos</a></p>
-            <p class="view"><a href="/news">news</a></p>
-            <p class="view"><a href="/press">press</a></p>
-            <p class="view"><a href="/about">about</a></p>
-            <p class="view"><a href="mailto:blackendsmusic@gmail.com" target="_blank" rel="noopener noreferrer">contact</a></p>
+            {% for nl in site.data.nav %}
+            <a href="{{ nl.href }}">{{ nl.title }}</a>
+            {% endfor %}
+            <a href="mailto:blackendsmusic@gmail.com" target="_blank" rel="noopener noreferrer">contact</a>
         </nav>
-        <script>
-            const nav = document.querySelector("nav");
-            let menu_open = false;
-            function toggleMenu() {
-                // debounce the close (do not need to debounce open)
-                if (!(nav.classList.contains("fade-out") && nav.classList.contains("show"))) {
-                    menu_open = !menu_open;
-                    if (menu_open) {
-                        nav.classList.add("show");
-                        setTimeout(() => {
-                            nav.classList.add("fade-in");
-                        }, 0);
-                    } else {
-                        nav.classList.add("fade-out");
-                        setTimeout(() => {
-                            nav.classList.remove("fade-out");
-                            nav.classList.remove("fade-in");
-                            nav.classList.remove("show");
-                        }, 700);
-                    }
-                }
-            }
-        </script>
+        <script src="/assets/js/nav.js"></script>
 
+      </header>
+      <section>{{ content }}</section>
+      <section id="zine">
+          <img src="/assets/img/icons/book.gif" />
+          <div class="mailing-list">
+              <h2>Free zine!!</h2>
+              <p>Join our mailing list to stay in the loop and gain access to our online zine:</p>
+              <iframe data-tally-src="https://tally.so/embed/wkJlYZ?hideTitle=1&transparentBackground=1" loading="lazy" width="100%" height="211" frameborder="0" marginheight="0" marginwidth="0" title="Gunk pop fan club!"></iframe>
+              <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+          </div>
+      </section>
+      <footer>
         <div class="socials">
             {% for social in site.data.socials %}
             <a href="{{ social.href }}" title="{{ social.title }}" target="_blank" rel="noopener noreferrer">
@@ -67,24 +53,9 @@
             </a>
             {% endfor %}
         </div>
-
-      </header>
-      <section>
-
-      {{ content }}
-
-      </section>
-      <footer>
-        <div class="socials socials-mobile">
-            {% for social in site.data.socials %}
-            <a href="{{ social.href }}" title="{{ social.title }}" target="_blank" rel="noopener noreferrer">
-                <img src="{{ social.img }}" alt="{{ social.title }}" />
-            </a>
-            {% endfor %}
-        </div>
       </footer>
-    </div>
-    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+
+      <script src="/assets/js/hero.js"></script>
   </body>
 </html>
 
