@@ -3,11 +3,8 @@ layout: default
 title: tour dates
 permalink: /tour/
 ---
-<!--
-<p class="help"><a href="/poster-collage/">🪧</a>&nbsp;</p>
-<p class="help"><a href="/map/">🌍</a></p>
-<p class="help"><a href="/calendar/">📅</a>&nbsp;</p>
--->
+<div style="margin: 30px auto; text-align: center; font-family: Blacklisted;"><a target="_blank" href="https://calendar.google.com/calendar/u/0/r?cid=s6vsr6ql80nvek8738l8rit5nd7tvgc5@import.calendar.google.com">Subscribe to our show calendar!</a></div>
+
 {% assign currentyear = "now" | date: "%Y" %}
 
 <h2 class="upcoming-shows">Upcoming shows</h2>
@@ -55,6 +52,10 @@ permalink: /tour/
 <h2 class="past-shows">Past shows ▼</h2>
 <ul class="past-container">
 </ul>
+
+<!-- <p class="help"><a href="/poster-collage/">🪧</a>&nbsp;</p> -->
+<!-- <p class="help"><a href="/map/">🌍</a></p> -->
+<!-- <p class="help"><a href="/calendar/">📅</a>&nbsp;</p> -->
 
 <!-- sorts the shows based on date -->
 <script src="/assets/js/shows.js" type="text/javascript"></script>
