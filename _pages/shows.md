@@ -17,9 +17,12 @@ permalink: /tour/
 {% assign posterstyle = "background-image: url('" | append: show.poster | append: "')" %}
 {% endunless %}
 
+{% assign fmtDate = show.date | date: "%m%-d%Y" %}
+{% assign anchor = "#" | append: fmtDate %}
+
 <li class="event dark-overlay" data-date="{{ show.date | date: '%B %-d, %Y' }}" style="{{ posterstyle }}">
 <div class="date">
-<a class="anchor" id="{{ show.date | date: "%m%-d%Y" }}" name="{{ show.date | date: "%m%-d%Y" }}" href="#{{ show.date | date: "%m%-d%Y" }}">
+<a class="anchor" id="{{ show.date | date: "%m%-d%Y" }}" name="{{ show.date | date: "%m%-d%Y" }}" href="{{ anchor }}">
 <p class="day">{{ show.date | date: '%-d' }}</p>
 {% assign showyear = show.date | date: "%Y" %}
 {% if showyear != currentyear %}
@@ -34,10 +37,10 @@ permalink: /tour/
 {% unless show.link == "" or show.link == null %}
   {% assign href = show.link %}
 {% else %}
-  {% assign href = show.url %}
+  {% assign href = anchor %}
 {% endunless %}
 
-<a href="{{ href }}" target="_blank">
+<a href="{{ href }}">
 <h3>{{ show.location }}</h3>
 <p>{{ show.venue }}</p>
 {% unless show.bands == "" or show.bands == null %}
