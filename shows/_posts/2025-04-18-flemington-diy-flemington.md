@@ -1,7 +1,7 @@
 ---
 layout: show
-location: "Iowa City"
-venue: "Public Space One"
+location: "Flemington"
+venue: "Flemington DIY"
 bands: ""
 link: ""
 poster: ""
