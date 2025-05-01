@@ -1,7 +1,7 @@
 ---
 layout: show
-location: "Nantes, FR"
-venue: "Au Chien Stupide"
+location: "Berlin, DE"
+venue: "FRANNZ Club"
 bands: ""
 link: ""
 poster: ""
